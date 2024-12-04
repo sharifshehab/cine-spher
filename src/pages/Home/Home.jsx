@@ -1,13 +1,20 @@
+import FeaturedMovies from "./FeaturedMovies/FeaturedMovies";
 import Slider from "./Slider/Slider";
 
 const Home = () => {
 
     return (
-        <main>
+        <>
             <section className="mt-0">
                 <Slider></Slider>
             </section>
-        </main>
+            <main className="container mx-auto">
+                <section>
+                    <FeaturedMovies></FeaturedMovies>
+                </section>
+            </main>
+        </>
+  
     );
 };
 
