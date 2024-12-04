@@ -3,11 +3,11 @@ import { FaFacebookF, FaLinkedinIn, FaPinterestP, FaBehance } from "react-icons/
 const Footer = () => {
     return (
         <>
-            <footer className="footer bg-base-200 text-base-content p-10">
+            <footer className="footer bg-[#f5f5f5] text-base-content p-10">
                 <div className="container mx-auto flex flex-wrap flex-col md:flex-row justify-between space-y-7">
                     <aside>
                         <a className="text-3xl">Cine <span className="text-secondaryColor underline">Sphere</span></a>
-                        <p>
+                        <p className="mt-3">
                             ACME Industries Ltd.
                             <br />
                             Providing reliable tech since 1992
