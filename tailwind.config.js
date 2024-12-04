@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primaryColor: 'var(--primary-color)',
+        secondaryColor: 'var(--secondary-color)',
+        textColor: 'var(--text-color)',
+      },
+      backgroundImage: {
+        'aboutBG': "url('./images/bg.jpg')"
+      },
+    },
   },
   plugins: [
     require('daisyui'),

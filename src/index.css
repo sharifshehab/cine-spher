@@ -1,5 +1,55 @@
 /* google font's */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*-------------------- 
+  custom properties 
+--------------------*/
+:root {
+    --primary-color: #e7ba0a;
+    --secondary-color: #f3b900;
+    --text-color: #1a202c;
+}
+
+/*-------------------- 
+  preset properties 
+--------------------*/
+body {
+  font-family: 'Kanit', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--text-color);
+  background: none repeat scroll 0 0;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+main>section {
+    margin: 130px 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  /* object-fit: cover; */
+}
+
+
+h3 {
+  font-size: 25px; /* 25px, 20px, 32px */
+  /* font-weight: 600; */
+}
+
+
