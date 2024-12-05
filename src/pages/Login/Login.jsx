@@ -1,10 +1,32 @@
 import { useForm } from "react-hook-form";
+import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 const Login = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const { handleEmailLogin, setLoading } = useAuth();
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location?.state ? location?.state : '/';
 
-    const onSubmit = data => {
-        console.log(data);
-        reset();
+    const onSubmit = async data => {
+
+        try {
+            const userCredential = await handleEmailLogin(data.email, data.password);
+            const user = userCredential.user;
+            reset();
+            navigate(from, { replace: true });
+        } catch (error) {
+            const errorMessage = error.message;
+            Swal.fire({
+                title: "There is an error",
+                text: `${errorMessage}`,
+                icon: "error"
+            });
+        } finally {
+            setLoading(false);
+        }
+
     }
 
     return (
@@ -21,7 +43,7 @@ const Login = () => {
                                         Email
                                     </span>
                                 </label>
-                                <input type="url" {...register("email", {
+                                <input type="email" {...register("email", {
                                     required: "Can't leave email empty"
                                 })} placeholder="Write your email" className="ps-2 border-[#e5eaf2] border-b outline-none  py-1 focus:border-secondaryColor transition-colors duration-300"
                                 />
@@ -35,7 +57,7 @@ const Login = () => {
                                         Password
                                     </span>
                                 </label>
-                                <input type="text" {...register("password", { required: "Can't leave password empty" })} placeholder="Write your password" className="ps-2 border-[#e5eaf2] border-b outline-none py-1 focus:border-secondaryColor transition-colors duration-300"
+                                <input type="password" {...register("password", { required: "Can't leave password empty" })} placeholder="Write your password" className="ps-2 border-[#e5eaf2] border-b outline-none py-1 focus:border-secondaryColor transition-colors duration-300"
                                 />
                                 {errors.password && (<span className="text-red-500 text-sm">{errors.password?.message}</span>)}
                             </div>
@@ -47,7 +69,7 @@ const Login = () => {
                 </div>
             </div>
             <div className="text-center">
-                <p>Don't have an account? <span className="text-secondaryColor underline underline-offset-4">Register here</span></p>
+                <p>Don't have an account? <span className="text-secondaryColor underline underline-offset-4"> <Link to={'/registration'}>Register here</Link></span></p>
             </div>
         </section>
     );

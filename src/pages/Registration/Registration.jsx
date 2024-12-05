@@ -1,11 +1,55 @@
 import { useForm } from "react-hook-form";
+import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
+import { Link, useNavigate } from "react-router-dom";
 
 const Registration = () => {
+    const { handleRegister, setUserNameAndPhoto } = useAuth();
+    const navigate = useNavigate();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        console.log(data);
-        reset();
+
+        const email = data.email;
+        const name = data.name;
+        const photo = data.photo;
+        const password = data.password;
+
+        handleRegister(email, password)
+            .then((userCredential) => {
+                // Signed up 
+                const user = userCredential.user;
+                setUserNameAndPhoto(name, photo)
+                    .then(() => {
+                        Swal.fire({
+                            title: "<strong>Registration Successful</strong>",
+                            icon: "success",
+                            html: `
+                                    <b>Your account has been created successfully.</b>
+                                    `,
+                            showCloseButton: false,
+                            showConfirmButton: false,
+                            timer: 2000
+                        }).then(() => {
+                            navigate('/'); 
+                        });
+                        reset();
+                    }).catch((error) => {
+                        Swal.fire({
+                            title: "There is an error",
+                            text: `${error}`,
+                            icon: "error"
+                        });
+                    });
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                Swal.fire({
+                    title: "There is an error",
+                    text: `${errorMessage}`,
+                    icon: "error"
+                });
+            });
 
     }
 
@@ -67,9 +111,9 @@ const Registration = () => {
                                 Password
                             </span>
                         </label>
-                        <input type="text" {...register("password", {
+                        <input type="password" {...register("password", {
                             required: "Can't leave password empty", pattern: {
-                                value: /^(?=.*[a-z])(?=.*[A-Z].{6,}$)/,
+                                value: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
                                 message: "Password must have an uppercase letter, lowercase letter and at least 6 character"
                             }
                         })} placeholder="Write your password" className="ps-2 border-[#e5eaf2] border-b outline-none py-1 focus:border-secondaryColor transition-colors duration-300"
@@ -84,7 +128,7 @@ const Registration = () => {
             </form>
 
             <div className="text-center mt-8">
-                <p>Already have an account? <span className="text-secondaryColor underline underline-offset-4">Login here</span></p>
+                <p>Already have an account? <span className="text-secondaryColor underline underline-offset-4"> <Link to={'/login'}>Login here</Link></span></p>
             </div>
         </section>
     );
