@@ -1,7 +1,5 @@
 
-
-const SingleFeatureMovie = ({ movieTitle, duration, poster, genre, releaseYear, rating }) => {
-
+const SingleMovie = ({ movieTitle, duration, poster, genre, releaseYear, rating }) => {
     return (
         <div className="shadow-lg bg-[#fff] rounded">
             <div className="flex w-full justify-between items-center p-4">
@@ -50,4 +48,4 @@ const SingleFeatureMovie = ({ movieTitle, duration, poster, genre, releaseYear, 
     );
 };
 
-export default SingleFeatureMovie;
+export default SingleMovie;

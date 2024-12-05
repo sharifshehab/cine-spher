@@ -8,13 +8,11 @@ const Home = () => {
             <section className="mt-0">
                 <Slider></Slider>
             </section>
-            <main className="container mx-auto">
-                <section>
-                    <FeaturedMovies></FeaturedMovies>
-                </section>
-            </main>
+            
+            <section className="container mx-auto px-5">
+                <FeaturedMovies></FeaturedMovies>
+            </section>
         </>
-  
     );
 };
 
