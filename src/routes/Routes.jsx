@@ -4,6 +4,7 @@ import Error from "../pages/Error/Error";
 import Home from "../pages/Home/Home";
 import AllMovies from "../pages/AllMovies/AllMovies";
 import FavoriteMovies from "../pages/FavoriteMovies/FavoriteMovies";
+import AddMovie from "../pages/AddMovie/AddMovie";
 
 export const router = createBrowserRouter([
 
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
             {
                 path: 'all-movies',
                 element: <AllMovies></AllMovies>
+            },
+            {
+                path: 'add-movie',
+                element: <AddMovie></AddMovie>
             },
             {
                 path: 'favorite-movies',

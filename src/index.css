@@ -16,7 +16,7 @@
   custom properties 
 --------------------*/
 :root {
-    --primary-color: #e7ba0a;
+    --primary-color: #ffcd07;
     --secondary-color: #f3b900;
     --text-color: #1a202c;
 }
@@ -52,4 +52,7 @@ h2 {
   font-weight: 500;
 }
 
+svg.star-svg {
+display: inline;
+}
 
