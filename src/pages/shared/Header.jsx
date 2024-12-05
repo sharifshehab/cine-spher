@@ -9,10 +9,10 @@ const Header = () => {
             <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent' : 'hover:text-primaryColor hover:bg-transparent'} to={'/all-movies'}>All Movies</NavLink></li>
             <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent' : 'hover:text-primaryColor hover:bg-transparent'} to={'/add-movie'}>Add Movie</NavLink></li>
             <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent' : 'hover:text-primaryColor hover:bg-transparent'} to={'/favorite-movies'}>My Favorites</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent' : 'hover:text-primaryColor hover:bg-transparent'} to={'/login'}>Login</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent' : 'hover:text-primaryColor hover:bg-transparent'} to={'/registration'}>Register</NavLink></li>
 
             <li><a>Extra Route</a></li>
-            <li><a>Login</a></li>
-            <li><a>Register</a></li>
         </>
 
     return (

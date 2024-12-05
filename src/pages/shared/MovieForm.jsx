@@ -154,7 +154,7 @@ const MovieForm = ({ handleFormSubmit }) => {
                     />
                     {errors.summary && (<span className="text-red-500 text-sm">{errors.summary?.message}</span>)}
                 </div>
-                <div >
+                <div className="text-center">
                     <button type="submit" className='py-3 px-4 bg-gradient-to-b from-primaryColor to-secondaryColor hover:bg-gradient-to-t transition-all duration-300 shadow-lg'>Add Movie</button>
                 </div>
             </form>
