@@ -3,6 +3,7 @@ import Root from "../layout/Root";
 import Error from "../pages/Error/Error";
 import Home from "../pages/Home/Home";
 import AllMovies from "../pages/AllMovies/AllMovies";
+import FavoriteMovies from "../pages/FavoriteMovies/FavoriteMovies";
 
 export const router = createBrowserRouter([
 
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
             {
                 path: 'all-movies',
                 element: <AllMovies></AllMovies>
+            },
+            {
+                path: 'favorite-movies',
+                element: <FavoriteMovies></FavoriteMovies>
             },
         ]
     }

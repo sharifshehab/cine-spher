@@ -1,5 +1,5 @@
 
-const SingleMovie = ({ movieTitle, duration, poster, genre, releaseYear, rating }) => {
+const SingleMovie = ({ movieTitle, duration, poster, genre, releaseYear, rating,btnText }) => {
     return (
         <div className="shadow-lg bg-[#fff] rounded">
             <div className="flex w-full justify-between items-center p-4">
