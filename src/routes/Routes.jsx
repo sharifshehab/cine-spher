@@ -8,6 +8,7 @@ import AddMovie from "../pages/AddMovie/AddMovie";
 import Login from "../pages/Login/Login";
 import Registration from "../pages/Registration/Registration";
 import PrivateRoute from "./PrivateRoute";
+import MovieDetails from "../pages/MovieDetails/MovieDetails";
 
 export const router = createBrowserRouter([
 
@@ -27,6 +28,13 @@ export const router = createBrowserRouter([
             {
                 path: 'all-movies',
                 element: <AllMovies></AllMovies>
+            },
+            {
+                path: '/movie-details/:movieId',
+                loader: async ({ params }) => {
+                    return fetch(`http://localhost:5000/movies/${params.movieId}`);
+                },
+                element: <MovieDetails></MovieDetails>
             },
             {
                 path: 'add-movie',

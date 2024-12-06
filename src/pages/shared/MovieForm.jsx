@@ -1,18 +1,31 @@
-
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import Select from "react-select";
 import { Rating } from 'react-simple-star-rating';
+
+const options = [
+    { value: "comedy", label: "Comedy" },
+    { value: "drama", label: "Drama" },
+    { value: "animation", label: "Animation" },
+    { value: "action", label: "Action" },
+    { value: "horror", label: "Horror" },
+];
 
 const MovieForm = ({ handleFormSubmit }) => {
 
     const { register, handleSubmit, setValue, watch, reset, formState: { errors } } = useForm();
-    const [ratingColor, setRatingColor] = useState(0); // Initial state for rating color
+    const [ratingColor, setRatingColor] = useState(0);
     const ratingValue = watch('rating', 0);
 
     //  Rating value
     const handleRating = (rate) => {
         setValue('rating', rate);
         setRatingColor(rate);
+    }
+
+    const handleGenre = (selectedOptions) => {
+        const genres = selectedOptions ? selectedOptions.map(option => option.value) : [];
+        setValue("genre", genres); // Update the value in React Hook Form
     }
 
     const onSubmit = data => {
@@ -74,16 +87,19 @@ const MovieForm = ({ handleFormSubmit }) => {
                             </span>
                         </label>
 
-                        <select {...register("genre", { required: true })} className="p-1 w-full border-[#e5eaf2] border-b focus:border-0 focus:outline-none" defaultValue="">
-                            <option disabled value="">Select movie genre</option>
-                            <option value="comedy">Comedy</option>
-                            <option value="drama">Drama</option>
-                            <option value="animation">Animation</option>
-                            <option value="action">Action</option>
-                            <option value="horror">Horror</option>
-                        </select>
-                        {errors.title && (<span className="text-red-500 text-sm">Select movie genre</span>)}
+                        <Select
+                            options={options}
+                            isMulti
+                            onChange={handleGenre}
+                            placeholder="Select movie genre"
+                            className="w-full border-[#e5eaf2] border-b movie-form"
+                        />
+                        
+                        <input type="hidden" {...register("genre", { required: true })} />
+                        
+                        {errors.genre && (<span className="text-red-500 text-sm">Select movie genre</span>)}
                     </div>
+                    
 
                     <div className="flex flex-col gap-[5px] w-full sm:w-[50%]">
                         <label >
@@ -92,7 +108,7 @@ const MovieForm = ({ handleFormSubmit }) => {
                                 Duration
                             </span>
                         </label>
-                        <input type="number" {...register("duration", { required: "Can't leave movie duration empty", min: { value: 60, message: "Minimum duration is 60min" } })} placeholder="Provide movie duration" className="ps-2 border-[#e5eaf2] border-b outline-none py-1 focus:border-secondaryColor transition-colors duration-300"
+                        <input type="number" {...register("duration", { required: "Can't leave movie duration empty", min: { value: 60, message: "Minimum duration is 60min" }, valueAsNumber: true })} placeholder="Provide movie duration" className="ps-2 border-[#e5eaf2] border-b outline-none py-1 focus:border-secondaryColor transition-colors duration-300"
                         />
                         {errors.duration && (<span className="text-red-500 text-sm">{errors.duration?.message}</span>)}
                     </div>
@@ -107,16 +123,15 @@ const MovieForm = ({ handleFormSubmit }) => {
                                 Release Year
                             </span>
                         </label>
-
-                        <select {...register("releaseYear", { required: true })} className="p-1 w-full  focus:border-0 focus:outline-none border-[#e5eaf2] border-b" defaultValue="">
-                            <option disabled value="">Select movie year</option>
+                        <select {...register("releaseYear", { required: true, valueAsNumber: true })} className="w-full p-1 test focus:border-0 focus:outline-none border-[#e5eaf2] border-b" defaultValue="">
+                            <option disabled value="" >Select movie year</option>
                             <option value="2024">2024</option>
                             <option value="2023">2023</option>
                             <option value="2022">2022</option>
                             <option value="2021">2021</option>
                             <option value="2020">2020</option>
                         </select>
-                        {errors.title && (<span className="text-red-500 text-sm">Select movie release year</span>)}
+                        {errors.releaseYear && (<span className="text-red-500 text-sm">Select movie release year</span>)}
                     </div>
 
                     <div className="flex flex-col gap-[5px] w-full sm:w-[50%]">

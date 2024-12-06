@@ -43,7 +43,7 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-  /* object-fit: cover; */
+  object-fit: cover;
 }
 
 
@@ -53,6 +53,29 @@ h2 {
 }
 
 svg.star-svg {
-display: inline;
+display: inline ;
 }
 
+.movie-form .css-13cymwt-control, .css-t3ipsp-control{
+  border: none !important;
+  box-shadow:none !important;
+  color: #f3b900;
+}
+
+.css-1u9des2-indicatorSeparator{
+  display: none;
+  
+}
+.movie-form .css-1xc3v61-indicatorContainer{
+  color:var(--text-color);
+  width: 24px;
+  padding: 0px 0px 0px 7px;
+}
+
+.test option:disabled {
+  color: var(--primary-color) !important;
+}
+
+.alert-confirm-btn{
+  background-color: var(--primary-color);
+}
