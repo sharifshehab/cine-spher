@@ -9,11 +9,12 @@ import Login from "../pages/Login/Login";
 import Registration from "../pages/Registration/Registration";
 import PrivateRoute from "./PrivateRoute";
 import MovieDetails from "../pages/MovieDetails/MovieDetails";
+import UpdateMovie from "../pages/UpdateMovie/UpdateMovie";
 
 export const router = createBrowserRouter([
 
     {
-        path: '/', 
+        path: '/',
         element: <Root></Root>,
         errorElement: <Error></Error>,
         children: [
@@ -30,7 +31,7 @@ export const router = createBrowserRouter([
                 element: <AllMovies></AllMovies>
             },
             {
-                path: '/movie-details/:movieId',
+                path: 'movie-details/:movieId',
                 loader: async ({ params }) => {
                     return fetch(`http://localhost:5000/movies/${params.movieId}`);
                 },
@@ -39,6 +40,13 @@ export const router = createBrowserRouter([
             {
                 path: 'add-movie',
                 element: <PrivateRoute><AddMovie></AddMovie></PrivateRoute>
+            },
+            {
+                path: 'update-movie/:id',
+                loader: async ({ params }) => {
+                    return fetch(`http://localhost:5000/movies/${params.id}`);
+                },
+                element: <PrivateRoute><UpdateMovie></UpdateMovie></PrivateRoute>
             },
             {
                 path: 'favorite-movies',

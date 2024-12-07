@@ -4,13 +4,12 @@ import Swal from "sweetalert2";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 const Login = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    const { handleEmailLogin, setLoading } = useAuth();
+    const { handleEmailLogin, setLoading, handleGoogleSignIn } = useAuth();
     const location = useLocation();
     const navigate = useNavigate();
     const from = location?.state ? location?.state : '/';
 
     const onSubmit = async data => {
-
         try {
             const userCredential = await handleEmailLogin(data.email, data.password);
             const user = userCredential.user;
@@ -26,7 +25,22 @@ const Login = () => {
         } finally {
             setLoading(false);
         }
+    }
 
+    const googleSignIn = () => {
+        handleGoogleSignIn()
+            .then(result => {
+                const user = result.user;
+                navigate(from, { replace: true });
+            })
+            .catch(error => {
+                const errorMessage = error.message;
+                Swal.fire({
+                    title: "There is an error",
+                    text: `${errorMessage}`,
+                    icon: "error"
+                });
+            })
     }
 
     return (
@@ -68,7 +82,19 @@ const Login = () => {
                     </form>
                 </div>
             </div>
-            <div className="text-center">
+            
+            <div className="flex items-center flex-col space-y-5">
+
+                <button onClick={googleSignIn}
+                    className="bg-[#3B9DF8] text-white rounded py-[5px] pl-2 pr-4 flex items-center gap-3  hover:bg-blue-500 transition-all duration-200">
+                    <div className="p-2 rounded-full bg-white">
+                        <img src="https://i.ibb.co/dQMmB8h/download-4-removebg-preview-1.png"
+                            alt="google logo"
+                            className="w-[23px]" />
+                    </div>
+                    Sign in with Google
+                </button> 
+
                 <p>Don't have an account? <span className="text-secondaryColor underline underline-offset-4"> <Link to={'/registration'}>Register here</Link></span></p>
             </div>
         </section>

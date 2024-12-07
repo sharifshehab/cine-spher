@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import { Link, useNavigate } from "react-router-dom";
 
 const Registration = () => {
-    const { handleRegister, setUserNameAndPhoto } = useAuth();
+    const { handleRegister, setUserNameAndPhoto, handleGoogleSignIn } = useAuth();
     const navigate = useNavigate();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
@@ -50,7 +50,22 @@ const Registration = () => {
                     icon: "error"
                 });
             });
+    }
 
+    const googleSignIn = () => {
+        handleGoogleSignIn()
+            .then(result => {
+                const user = result.user;
+                navigate('/');
+            })
+            .catch(error => {
+                const errorMessage = error.message;
+                Swal.fire({
+                    title: "There is an error",
+                    text: `${errorMessage}`,
+                    icon: "error"
+                });
+            })
     }
 
     return (
@@ -127,8 +142,19 @@ const Registration = () => {
                 </div>
             </form>
 
-            <div className="text-center mt-8">
-                <p>Already have an account? <span className="text-secondaryColor underline underline-offset-4"> <Link to={'/login'}>Login here</Link></span></p>
+            <div className="flex items-center flex-col space-y-5 mt-7">
+
+                <button onClick={googleSignIn}
+                    className="bg-[#3B9DF8] text-white rounded py-[5px] pl-2 pr-4 flex items-center gap-3  hover:bg-blue-500 transition-all duration-200">
+                    <div className="p-2 rounded-full bg-white">
+                        <img src="https://i.ibb.co/dQMmB8h/download-4-removebg-preview-1.png"
+                            alt="google logo"
+                            className="w-[23px]" />
+                    </div>
+                    Sign in with Google
+                </button>
+
+                <p>Don't have an account? <span className="text-secondaryColor underline underline-offset-4"> <Link to={'/registration'}>Register here</Link></span></p>
             </div>
         </section>
     );

@@ -11,11 +11,24 @@ const options = [
     { value: "horror", label: "Horror" },
 ];
 
-const MovieForm = ({ handleFormSubmit }) => {
-
+const MovieForm = ({ handleFormSubmit, currentData = null }) => {
+    
+    const currentGenre = currentData ? options.filter(option => currentData?.genre.includes(option.value)) : [];
+    
     const { register, handleSubmit, setValue, watch, reset, formState: { errors } } = useForm();
     const [ratingColor, setRatingColor] = useState(0);
     const ratingValue = watch('rating', 0);
+    const genreValue = watch('genre', []);
+
+    // <Select
+    //     options={options}
+    //     isMulti
+    //     onChange={handleGenre}
+    //     placeholder="Select movie genre"
+    //     className="w-full border-[#e5eaf2] border-b movie-form"
+    //     defaultValue={currentGenre}
+    //     value={genreValue}
+    // />
 
     //  Rating value
     const handleRating = (rate) => {
@@ -49,7 +62,7 @@ const MovieForm = ({ handleFormSubmit }) => {
                             </span>
                         </label>
 
-                        <input type="url" {...register("poster", {
+                        <input type="url" defaultValue={currentData ? currentData.poster : ""} {...register("poster", {
                             required: "Can't leave movie poster URL empty",
                             pattern: {
                                 value: /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i,
@@ -61,8 +74,6 @@ const MovieForm = ({ handleFormSubmit }) => {
                         {errors.poster && (<span className="text-red-500 text-sm">{errors.poster?.message}</span>)}
                     </div>
 
-
-
                     <div className="flex flex-col gap-[5px] w-full sm:w-[50%]">
                         <label >
                             <span
@@ -70,7 +81,7 @@ const MovieForm = ({ handleFormSubmit }) => {
                                 Movie Title
                             </span>
                         </label>
-                        <input type="text" {...register("title", { required: "Can't leave movie title empty", minLength: { value: 5, message: "minimum length is 5" } })} placeholder="Write movie title" className="ps-2 border-[#e5eaf2] border-b outline-none py-1 focus:border-secondaryColor transition-colors duration-300"
+                        <input type="text" defaultValue={currentData ? currentData.title : ""}  {...register("title", { required: "Can't leave movie title empty", minLength: { value: 5, message: "minimum length is 5" } })} placeholder="Write movie title" className="ps-2 border-[#e5eaf2] border-b outline-none py-1 focus:border-secondaryColor transition-colors duration-300"
                         />
 
                         {errors.title && (<span className="text-red-500 text-sm">{errors.title?.message}</span>)}
@@ -93,6 +104,8 @@ const MovieForm = ({ handleFormSubmit }) => {
                             onChange={handleGenre}
                             placeholder="Select movie genre"
                             className="w-full border-[#e5eaf2] border-b movie-form"
+                            defaultValue={currentGenre} 
+                            value={genreValue}
                         />
                         
                         <input type="hidden" {...register("genre", { required: true })} />
@@ -108,7 +121,7 @@ const MovieForm = ({ handleFormSubmit }) => {
                                 Duration
                             </span>
                         </label>
-                        <input type="number" {...register("duration", { required: "Can't leave movie duration empty", min: { value: 60, message: "Minimum duration is 60min" }, valueAsNumber: true })} placeholder="Provide movie duration" className="ps-2 border-[#e5eaf2] border-b outline-none py-1 focus:border-secondaryColor transition-colors duration-300"
+                        <input type="number" defaultValue={currentData ? currentData.duration : ""}  {...register("duration", { required: "Can't leave movie duration empty", min: { value: 60, message: "Minimum duration is 60min" }, valueAsNumber: true })} placeholder="Provide movie duration" className="ps-2 border-[#e5eaf2] border-b outline-none py-1 focus:border-secondaryColor transition-colors duration-300"
                         />
                         {errors.duration && (<span className="text-red-500 text-sm">{errors.duration?.message}</span>)}
                     </div>
@@ -123,7 +136,7 @@ const MovieForm = ({ handleFormSubmit }) => {
                                 Release Year
                             </span>
                         </label>
-                        <select {...register("releaseYear", { required: true, valueAsNumber: true })} className="w-full p-1 test focus:border-0 focus:outline-none border-[#e5eaf2] border-b" defaultValue="">
+                        <select defaultValue={currentData ? currentData.releaseYear : ""}  {...register("releaseYear", { required: true, valueAsNumber: true })} className="w-full p-1 test focus:border-0 focus:outline-none border-[#e5eaf2] border-b">
                             <option disabled value="" >Select movie year</option>
                             <option value="2024">2024</option>
                             <option value="2023">2023</option>
@@ -142,11 +155,11 @@ const MovieForm = ({ handleFormSubmit }) => {
                             </span>
                         </label>
 
-                        <input type="hidden" {...register("rating", { required: true })} />
+                        <input type="hidden"  {...register("rating", { required: true })} />
                         <Rating
                             onClick={handleRating}
                             disableFillHover={true}
-                            initialValue={ratingColor}
+                            initialValue={currentData ? currentData.rating : ratingColor}
                         />
                         {errors.rating && (<span className="text-red-500 text-sm">Select movie rating</span>)}
                     </div>
@@ -163,6 +176,7 @@ const MovieForm = ({ handleFormSubmit }) => {
 
                     <textarea
                         type="text"
+                        defaultValue={currentData ? currentData.summary : ""} 
                         {...register("summary", { required: "Can't leave movie summary empty", minLength: { value: 10, message: "minimum length is 10" } })}
                         placeholder="Write something about the movie"
                         className="ps-2 border-[#e5eaf2] border-b outline-none py-1 focus:border-secondaryColor transition-colors duration-300 w-full  min-h-[200px] mt-2"
