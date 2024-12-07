@@ -50,14 +50,14 @@ const MovieForm = ({ handleFormSubmit, currentData = null }) => {
     return (
         <>
             {/* form area */}
-            <form className="w-full mt-[50px] space-y-6" onSubmit={handleSubmit(onSubmit)}>
+            <form className="w-full mt-[50px] space-y-6 dark:" onSubmit={handleSubmit(onSubmit)}>
 
                 <div className="flex flex-col sm:flex-row items-center gap-12">
 
                     <div className="flex flex-col gap-[5px] w-full sm:w-[50%]">
                         <label>
                             <span
-                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 ">
+                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 dark:text-primaryColor">
                                 Movie Poster
                             </span>
                         </label>
@@ -77,7 +77,7 @@ const MovieForm = ({ handleFormSubmit, currentData = null }) => {
                     <div className="flex flex-col gap-[5px] w-full sm:w-[50%]">
                         <label >
                             <span
-                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 ">
+                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 dark:text-primaryColor">
                                 Movie Title
                             </span>
                         </label>
@@ -93,7 +93,7 @@ const MovieForm = ({ handleFormSubmit, currentData = null }) => {
                     <div className="flex flex-col gap-[5px] w-full sm:w-[50%]">
                         <label >
                             <span
-                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 ">
+                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 dark:text-primaryColor">
                                 Genre
                             </span>
                         </label>
@@ -117,7 +117,7 @@ const MovieForm = ({ handleFormSubmit, currentData = null }) => {
                     <div className="flex flex-col gap-[5px] w-full sm:w-[50%]">
                         <label >
                             <span
-                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 ">
+                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 dark:text-primaryColor">
                                 Duration
                             </span>
                         </label>
@@ -132,7 +132,7 @@ const MovieForm = ({ handleFormSubmit, currentData = null }) => {
                     <div className="flex flex-col gap-[5px] w-full sm:w-[50%]">
                         <label >
                             <span
-                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 ">
+                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 dark:text-primaryColor">
                                 Release Year
                             </span>
                         </label>
@@ -150,7 +150,7 @@ const MovieForm = ({ handleFormSubmit, currentData = null }) => {
                     <div className="flex flex-col gap-[5px] w-full sm:w-[50%]">
                         <label >
                             <span
-                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 ">
+                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 dark:text-primaryColor">
                                 Rating
                             </span>
                         </label>
@@ -169,7 +169,7 @@ const MovieForm = ({ handleFormSubmit, currentData = null }) => {
                 <div className="w-full">
                     <label >
                         <span
-                            className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 ">
+                            className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 dark:text-primaryColor">
                             Summary
                         </span>
                     </label>
@@ -184,7 +184,7 @@ const MovieForm = ({ handleFormSubmit, currentData = null }) => {
                     {errors.summary && (<span className="text-red-500 text-sm">{errors.summary?.message}</span>)}
                 </div>
                 <div className="text-center">
-                    <button type="submit" className='py-3 px-4 bg-gradient-to-b from-primaryColor to-secondaryColor hover:bg-gradient-to-t transition-all duration-300 shadow-lg'>Add Movie</button>
+                    <button type="submit" className='py-3 px-4 bg-gradient-to-b from-primaryColor to-secondaryColor hover:bg-gradient-to-t transition-all duration-300 shadow-lg'>{currentData ? "Update Movie" : "Add Movie" }</button>
                 </div>
             </form>
         </>

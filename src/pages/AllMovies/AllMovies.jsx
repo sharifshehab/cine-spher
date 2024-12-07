@@ -44,7 +44,7 @@ const AllMovies = () => {
 
     return (
         <section className="container mx-auto px-5">
-            <h2 className="text-secondaryColor text-center mb-16 text-5xl"><span className="text-textColor">All</span> <span className="underline underline-offset-8">Movies</span></h2>
+            <h2 className="text-secondaryColor text-center mb-16 text-5xl"><span className="text-textColor dark:text-white">All</span> <span className="underline underline-offset-8">Movies</span></h2>
 
             <form action="#" onSubmit={handleSearch}>
                 <label className="input input-bordered flex items-center gap-2">
@@ -71,7 +71,7 @@ const AllMovies = () => {
             
             {loading ? (<p className="text-center"><span className="loading loading-spinner loading-lg text-primaryColor"></span></p>)
                 : (
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16 mt-10">
                         {
                             movies.length > 0 ? (movies.map(movie => <SingleMovie key={movie._id} movie={movie}></SingleMovie>))
                                 :

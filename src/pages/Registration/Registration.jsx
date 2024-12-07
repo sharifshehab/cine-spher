@@ -70,7 +70,7 @@ const Registration = () => {
 
     return (
         <section className="container mx-auto px-5">
-            <h2 className="text-secondaryColor text-center"><span className="text-textColor">User </span><span className="underline underline-offset-8">Register</span></h2>
+            <h2 className="text-secondaryColor text-center"><span className="text-textColor dark:text-white">User </span><span className="underline underline-offset-8">Register</span></h2>
 
             <form className="w-full mt-[50px] space-y-6" onSubmit={handleSubmit(onSubmit)}>
 
@@ -78,7 +78,7 @@ const Registration = () => {
                     <div className="flex flex-col gap-[5px] w-full sm:w-[50%]">
                         <label>
                             <span
-                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 ">
+                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 dark:text-primaryColor">
                                 Email
                             </span>
                         </label>
@@ -91,7 +91,7 @@ const Registration = () => {
                     <div className="flex flex-col gap-[5px] w-full sm:w-[50%]">
                         <label >
                             <span
-                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 ">
+                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 dark:text-primaryColor">
                                 Name
                             </span>
                         </label>
@@ -105,7 +105,7 @@ const Registration = () => {
                     <div className="flex flex-col gap-[5px] w-full sm:w-[50%]">
                         <label>
                             <span
-                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 ">
+                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 dark:text-primaryColor">
                                 Photo
                             </span>
                         </label>
@@ -122,7 +122,7 @@ const Registration = () => {
                     <div className="flex flex-col gap-[5px] w-full sm:w-[50%]">
                         <label >
                             <span
-                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 ">
+                                className="ps-2 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 dark:text-primaryColor">
                                 Password
                             </span>
                         </label>
@@ -154,7 +154,7 @@ const Registration = () => {
                     Sign in with Google
                 </button>
 
-                <p>Don't have an account? <span className="text-secondaryColor underline underline-offset-4"> <Link to={'/registration'}>Register here</Link></span></p>
+                <p className="dark:text-white">Already have an account? <span className="text-secondaryColor underline underline-offset-4"> <Link to={'/login'}>Login here</Link></span></p>
             </div>
         </section>
     );

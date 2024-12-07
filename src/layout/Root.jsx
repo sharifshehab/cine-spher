@@ -6,7 +6,7 @@ const Root = () => {
     return (
         <>
             <Header></Header>
-            <main>
+            <main className="dark:bg-gray-900">
                 <Outlet></Outlet>
             </main>
             <Footer></Footer>

@@ -10,6 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  @apply transition-colors duration-500
 }
 
 /*-------------------- 
@@ -36,7 +37,7 @@ body {
 }
 
 main>section {
-    margin: 130px 0;
+    padding: 130px 0;
 }
 
 img {
