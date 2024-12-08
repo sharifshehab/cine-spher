@@ -13,7 +13,7 @@ export default {
         textColor: 'var(--text-color)',
       },
       backgroundImage: {
-        'aboutBG': "url('./images/bg.jpg')"
+        'comingSoonBG': "url('https://xenothemes.co.uk/specto/wp-content/uploads/sites/2/2017/07/hero-whats-on.jpg')"
       },
     },
   },

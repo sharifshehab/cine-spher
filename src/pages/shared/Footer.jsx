@@ -8,26 +8,24 @@ const Footer = () => {
                     <aside>
                         <a className="text-3xl dark:text-white">Cine <span className="text-secondaryColor underline">Sphere</span></a>
                         <p className="mt-3 dark:text-white">
-                            ACME Industries Ltd.
+                            Cine Sphere.
                             <br />
-                            Providing reliable tech since 1992
+                            Providing high-quality entertainment from reliable source
                         </p>
                     </aside>
                     {/* logo */}
                     <nav className="flex flex-col space-y-3 dark:text-white">
-                        <h6 className="footer-title text-base text-primaryColor">Company</h6>
-                        <a className="link link-hover">About us</a>
+                        <h6 className="footer-title  ">About</h6>
+                        <a className="link link-hover">Blog</a>
                         <a className="link link-hover">Contact</a>
-                        <a className="link link-hover">Jobs</a>
-                        <a className="link link-hover">Press kit</a>
+                        <a className="link link-hover">About us</a>
                     </nav>
                     {/* links */}
                     <nav className="flex flex-col space-y-3 dark:text-white">
-                        <h6 className="footer-title text-base text-secondaryColor">Company</h6>
-                        <a className="link link-hover">About us</a>
-                        <a className="link link-hover">Contact</a>
-                        <a className="link link-hover">Jobs</a>
-                        <a className="link link-hover">Press kit</a>
+                        <h6 className="footer-title">Legal</h6>
+                        <a className="link link-hover">FAQ's</a>
+                        <a className="link link-hover">Privacy Policy</a>
+                        <a className="link link-hover">Refund</a>
                     </nav>
                     {/* links */}
                     <form>

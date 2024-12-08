@@ -10,6 +10,7 @@ import Registration from "../pages/Registration/Registration";
 import PrivateRoute from "./PrivateRoute";
 import MovieDetails from "../pages/MovieDetails/MovieDetails";
 import UpdateMovie from "../pages/UpdateMovie/UpdateMovie";
+import PricingPlans from "../pages/Home/PricingPlans/PricingPlans";
 
 export const router = createBrowserRouter([
 
@@ -33,7 +34,7 @@ export const router = createBrowserRouter([
             {
                 path: 'movie-details/:movieId',
                 loader: async ({ params }) => {
-                    return fetch(`http://localhost:5000/movies/${params.movieId}`);
+                    return fetch(`https://cine-sphere-server.vercel.app/movies/${params.movieId}`);
                 },
                 element: <MovieDetails></MovieDetails>
             },
@@ -44,13 +45,17 @@ export const router = createBrowserRouter([
             {
                 path: 'update-movie/:id',
                 loader: async ({ params }) => {
-                    return fetch(`http://localhost:5000/movies/${params.id}`);
+                    return fetch(`https://cine-sphere-server.vercel.app/movies/${params.id}`);
                 },
                 element: <PrivateRoute><UpdateMovie></UpdateMovie></PrivateRoute>
             },
             {
                 path: 'favorite-movies',
                 element: <PrivateRoute><FavoriteMovies></FavoriteMovies></PrivateRoute>
+            },
+            {
+                path: 'plans',
+                element: <PricingPlans></PricingPlans>
             },
             {
                 path: 'login',

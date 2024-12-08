@@ -105,7 +105,6 @@ const MovieForm = ({ handleFormSubmit, currentData = null }) => {
                             placeholder="Select movie genre"
                             className="w-full border-[#e5eaf2] border-b movie-form"
                             defaultValue={currentGenre} 
-                            value={genreValue}
                         />
                         
                         <input type="hidden" {...register("genre", { required: true })} />

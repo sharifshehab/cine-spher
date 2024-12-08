@@ -43,10 +43,6 @@ const FeaturedMovies = () => {
                         </div>
                     )
                 }
-
-                
-          
-            
         </div>
     );
 };

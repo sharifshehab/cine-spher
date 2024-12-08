@@ -49,8 +49,8 @@ const SingleMovie = ({ movie, setFavoriteMovies, deleteBtn = false }) => {
     }
 
     return (
-        <div className="shadow-lg bg-[#fff] rounded">
-            <div className="flex w-full justify-between items-center p-4">
+        <div className="shadow-lg bg-[#fff] rounded flex flex-col">
+            <div className="flex w-full justify-between items-center p-4 flex-grow">
                 <div className="flex items-center gap-4">
                     <div className="">
                         <h2 className="font-[500] text-[1.2rem]">{title}</h2>
@@ -65,7 +65,7 @@ const SingleMovie = ({ movie, setFavoriteMovies, deleteBtn = false }) => {
                 className="w-full h-[250px]"
             />
 
-            <div className="flex flex-col w-full p-4 ">
+            <div className="flex flex-col w-full p-4">
                 <div className="space-y-2 mb-5">
                     <div><h4>Genre: {
                         genre.map((item, idx) => <span key={idx}>{item}{idx < genre.length - 1 && ', '}</span>)

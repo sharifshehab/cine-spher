@@ -23,8 +23,7 @@ const Header = () => {
             <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/all-movies'}>All Movies</NavLink></li>
             <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/add-movie'}>Add Movie</NavLink></li>
             <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/favorite-movies'}>My Favorites</NavLink></li>
-
-            <li><a>Extra Route</a></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/plans'}>Our Plans</NavLink></li>
         </>
 
     return (

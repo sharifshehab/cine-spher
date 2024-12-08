@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosBase = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://cine-sphere-server.vercel.app',
 });
 
 const useAxios = () => {
