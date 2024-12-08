@@ -1,8 +1,13 @@
-# React + Vite
+# CineSphere - Journey to the Realm of Films
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CineSphere is a modern movie streaming platform that provides an immersive and seamless viewing experience. With a user-friendly interface and flexible subscription plans, CineSphere allows users to store their favorite content in the cloud, and enjoy exclusive features tailored to movie enthusiasts. Whether you're a casual viewer or a film enthusiast, CineSphere is designed to bring the best in entertainment right to your fingertips.
 
-Currently, two official plugins are available:
+## Key features:
+1. **Display the top six highest-rated movies on the home page**
+2. **Add favorite movies on the user's list**
+3. **Search movie by name from the all movies list**
+4. **Update movie information**
+5. **Private routes for registered users**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Live link:
+- **[Cine Spher](https://cine-sphere-2d6f3.web.app)**
