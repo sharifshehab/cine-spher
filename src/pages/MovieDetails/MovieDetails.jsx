@@ -50,7 +50,9 @@ const MovieDetails = () => {
                         Swal.fire({
                             title: "Deleted!",
                             text: `"${title}" has been deleted.`,
-                            icon: "success"
+                            icon: "success",
+                            timer: 2300,
+                            showConfirmButton: false
                         });
                         navigate('/all-movies');
                     })
