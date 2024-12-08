@@ -17,18 +17,10 @@ const MovieForm = ({ handleFormSubmit, currentData = null }) => {
     
     const { register, handleSubmit, setValue, watch, reset, formState: { errors } } = useForm();
     const [ratingColor, setRatingColor] = useState(0);
+    const [genresValue, setGenresValue] = useState([]);
+
     const ratingValue = watch('rating', 0);
     const genreValue = watch('genre', []);
-
-    // <Select
-    //     options={options}
-    //     isMulti
-    //     onChange={handleGenre}
-    //     placeholder="Select movie genre"
-    //     className="w-full border-[#e5eaf2] border-b movie-form"
-    //     defaultValue={currentGenre}
-    //     value={genreValue}
-    // />
 
     //  Rating value
     const handleRating = (rate) => {
@@ -37,14 +29,18 @@ const MovieForm = ({ handleFormSubmit, currentData = null }) => {
     }
 
     const handleGenre = (selectedOptions) => {
+
         const genres = selectedOptions ? selectedOptions.map(option => option.value) : [];
         setValue("genre", genres); // Update the value in React Hook Form
+        setGenresValue(selectedOptions);
     }
+
 
     const onSubmit = data => {
         handleFormSubmit(data);
         reset();
         setRatingColor(0);
+        genreValue([]);
     }
 
     return (
@@ -105,6 +101,7 @@ const MovieForm = ({ handleFormSubmit, currentData = null }) => {
                             placeholder="Select movie genre"
                             className="w-full border-[#e5eaf2] border-b movie-form"
                             defaultValue={currentGenre} 
+                           
                         />
                         
                         <input type="hidden" {...register("genre", { required: true })} />

@@ -21,7 +21,7 @@ const NowInTheCinema = () => {
                     <div className="grid grid-cols-12 w-full items-center bg-primaryColor text-white ">
                         <div className="grid col-span-5 justify-center gap-3 ">
                             <div>
-                                <h1 className="text-2xl text-textColor underline underline-offset-4 decoration-white">Gravity</h1>
+                                <h1 className="text-xl md:text-2xl text-textColor underline underline-offset-4 decoration-white">Gravity</h1>
                                 <p className="text-sm text-textColor ">Genre: Sci-Fi | Thriller</p>
                             </div>
                             <div className="flex flex-row gap-3">
@@ -49,7 +49,7 @@ const NowInTheCinema = () => {
                     <div className="grid grid-cols-12 w-full items-center bg-primaryColor text-white ">
                         <div className="grid col-span-5 justify-center gap-3 ">
                             <div>
-                                <h1 className="text-2xl text-textColor underline underline-offset-4 decoration-white">World War Z</h1>
+                                <h1 className="text-xl md:text-2xl text-textColor underline underline-offset-4 decoration-white">World War Z</h1>
                                 <p className="text-sm text-textColor ">Genre: Action | Horror</p>
                             </div>
                             <div className="flex flex-row gap-3">
@@ -77,7 +77,7 @@ const NowInTheCinema = () => {
                     <div className="grid grid-cols-12 w-full items-center bg-primaryColor text-white ">
                         <div className="grid col-span-5 justify-center gap-3 ">
                             <div>
-                                <h1 className="text-2xl text-textColor underline underline-offset-4 decoration-white">The Internship</h1>
+                                <h1 className="text-xl md:text-2xl text-textColor underline underline-offset-4 decoration-white">The Internship</h1>
                                 <p className="text-sm text-textColor ">Genre: Comedy</p>
                             </div>
                             <div className="flex flex-row gap-3">
@@ -105,7 +105,7 @@ const NowInTheCinema = () => {
                     <div className="grid grid-cols-12 w-full items-center bg-primaryColor text-white ">
                         <div className="grid col-span-5 justify-center gap-3 ">
                             <div>
-                                <h1 className="text-2xl text-textColor underline underline-offset-4 decoration-white">This Is the End</h1>
+                                <h1 className="text-xl md:text-2xl text-textColor underline underline-offset-4 decoration-white">This Is the End</h1>
                                 <p className="text-sm text-textColor ">Genre: Comedy | Fantasy</p>
                             </div>
                             <div className="flex flex-row gap-3">
@@ -133,7 +133,7 @@ const NowInTheCinema = () => {
                     <div className="grid grid-cols-12 w-full items-center bg-primaryColor text-white ">
                         <div className="grid col-span-5 justify-center gap-3 ">
                             <div>
-                                <h1 className="text-2xl text-textColor underline underline-offset-4 decoration-white">Thor</h1>
+                                <h1 className="text-xl md:text-2xl text-textColor underline underline-offset-4 decoration-white">Thor</h1>
                                 <p className="text-sm text-textColor ">Genre: Action | Adventure </p>
                             </div>
                             <div className="flex flex-row gap-3">
@@ -161,7 +161,7 @@ const NowInTheCinema = () => {
                     <div className="grid grid-cols-12 w-full items-center bg-primaryColor text-white ">
                         <div className="grid col-span-5 justify-center gap-3 ">
                             <div>
-                                <h1 className="text-2xl text-textColor underline underline-offset-4 decoration-white">The Hobbit</h1>
+                                <h1 className="text-xl md:text-2xl text-textColor underline underline-offset-4 decoration-white">The Hobbit</h1>
                                 <p className="text-sm text-textColor ">Genre: Adventure | Fantasy</p>
                             </div>
                             <div className="flex flex-row gap-3">

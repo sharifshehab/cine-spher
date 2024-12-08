@@ -34,11 +34,11 @@ const Header = () => {
 
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <HiMiniBars3BottomLeft  size={25}/>
+                            <HiMiniBars3BottomLeft size={25} className="dark:text-primaryColor"/>
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-base-100 rounded z-10 mt-3 w-52 p-2 shadow dark:bg-textColor">
                             {menuItems}
                         </ul>
                     </div>
@@ -63,7 +63,7 @@ const Header = () => {
                         </div>
 
                         <div
-                            className="px-6 py-3 bg-white rounded-sm boxShadow w-40 absolute top-16 z-[-1] left-[-100px] group-hover:translate-y-0 translate-y-[-20px] group-hover:opacity-100 opacity-0 group-hover:z-30 transition-all duration-300 space-y-3">
+                            className="px-6 py-3 bg-white rounded shadow w-40 absolute top-16 z-[-1] left-[-100px] group-hover:translate-y-0 translate-y-[-20px] group-hover:opacity-100 opacity-0 group-hover:z-30 transition-all duration-300 space-y-3">
                             <div className="underline underline-offset-4 decoration-primaryColor decoration-4"><span>{user?.displayName}</span></div>
                             <button onClick={() => handleLogOut()} className="hover:text-secondaryColor duration-200">Logout</button>
                         </div>
@@ -71,8 +71,8 @@ const Header = () => {
                         (<div className="items-center flex dark:text-white">
                         <Link to={'/login'}>
                             <button
-                                className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize hover:text-primaryColor hover:underline transition-all duration-300">Sign
-                                in
+                                className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize hover:text-primaryColor hover:underline transition-all duration-300">Log
+in
                             </button>
                         </Link>
                             <span className="text-gray-500">/</span>

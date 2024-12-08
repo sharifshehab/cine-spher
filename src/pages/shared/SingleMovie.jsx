@@ -71,7 +71,7 @@ const SingleMovie = ({ movie, setFavoriteMovies, deleteBtn = false }) => {
                     }</h4></div>
 
                     <div><h4>Release Year: {releaseYear}</h4></div>
-                    <div><h4>Rating: {rating} stars</h4>
+                    <div><h4>Rating: {rating} star</h4>
                     </div>
                 </div>
 
@@ -93,7 +93,7 @@ const SingleMovie = ({ movie, setFavoriteMovies, deleteBtn = false }) => {
                                     xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                 </svg>
                             </span>
-                            <span className="text-secondaryColor relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">Delete</span>
+                            <span className="text-secondaryColor relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">Delete Favorite</span>
                         </button>
                         :
                         <Link to={`/movie-details/${_id}`}>

@@ -79,6 +79,9 @@ const Login = () => {
                                     />
                                     {errors.password && (<span className="text-red-500 text-sm">{errors.password?.message}</span>)}
                                 </div>
+                                <div className="text-right">
+                                    <a href="#" className="dark:text-primaryColor">Forget Password</a>
+                                </div>
                             </div>
                             <div className="text-center mt-8">
                                 <button type="submit" className='py-3 px-4 bg-gradient-to-b from-primaryColor to-secondaryColor hover:bg-gradient-to-t transition-all duration-300 shadow-lg'>Login</button>
