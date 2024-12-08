@@ -59,16 +59,16 @@ const Footer = () => {
                     <div className="grid grid-flow-col gap-4">
    
                         {/* social media */}
-                        <a>
+                        <a href="https://www.facebook.com/svshuvo.4.0">
                             <FaFacebookF size={18} />
                         </a>
-                        <a>
+                        <a href="https://www.linkedin.com/in/sharifshehab">
                             <FaLinkedinIn size={20} />
                         </a>
-                        <a>
+                        <a href="https://www.behance.net/onwebdesk">
                             <FaBehance size={20} />
                         </a>
-                        <a>
+                        <a href="https://www.pinterest.com/onlywebdesk">
                             <FaPinterestP size={20} />
                         </a>
                     </div>
