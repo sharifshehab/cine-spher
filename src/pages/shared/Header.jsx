@@ -5,7 +5,7 @@ import { IoSunnyOutline } from "react-icons/io5";
 
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 const Header = () => {
@@ -19,15 +19,15 @@ const Header = () => {
 
     const menuItems =
         <>
-            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/'} end>Home</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/all-movies'}>All Movies</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/add-movie'}>Add Movie</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/favorite-movies'}>My Favorites</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/plans'}>Our Plans</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent focus:text-secondaryColor' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/'} end>Home</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent focus:text-secondaryColor' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/all-movies'}>All Movies</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent focus:text-secondaryColor' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/add-movie'}>Add Movie</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent focus:text-secondaryColor' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/favorite-movies'}>My Favorites</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent focus:text-secondaryColor' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/plans'}>Our Plans</NavLink></li>
         </>
 
     return (
-        <header className="bg-[#f5f5f5] dark:bg-gray-900">
+        <header className="bg-[#f5f5f5] dark:bg-gray-900 dark:border-b dark:border-primaryColor">
 
             <div className="navbar py-4 container mx-auto px-5">
                 <div className="navbar-start">
@@ -68,7 +68,7 @@ const Header = () => {
                             <button onClick={() => handleLogOut()} className="hover:text-secondaryColor duration-200">Logout</button>
                         </div>
                     </div>) :
-                        (<div className="items-center flex">
+                        (<div className="items-center flex dark:text-white">
                         <Link to={'/login'}>
                             <button
                                 className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize hover:text-primaryColor hover:underline transition-all duration-300">Sign
@@ -89,7 +89,7 @@ const Header = () => {
                     {/* toggle DarkMode  */}
                     <button onClick={() => darkModeHandler()}>
                         {
-                            dark ? <IoMoonOutline size={28} className="text-primaryColor" /> : <IoSunnyOutline size={28}/>
+                            dark ? <IoMoonOutline size={28} className="text-white" /> : <IoSunnyOutline size={28}/>
                         }
                     </button>
                 </div>

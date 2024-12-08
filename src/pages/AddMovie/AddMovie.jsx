@@ -2,6 +2,7 @@ import MovieForm from "../shared/MovieForm";
 import useAuth from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const AddMovie = () => {
     const { user } = useAuth();
@@ -44,10 +45,13 @@ const AddMovie = () => {
     }
 
     return (
-        <section className="container mx-auto px-5">
-            <h2 className="text-secondaryColor text-center mb-16"><span className="text-textColor dark:text-white">Add</span> <span className="underline underline-offset-8">Movie</span></h2>
-            <MovieForm handleFormSubmit={addMovie}></MovieForm>
-        </section>
+        <>
+            <Helmet> <title>Cine Sphere - Add Movies</title> </Helmet>
+            <section className="container mx-auto px-5">
+                <h2 className="text-secondaryColor text-center mb-16"><span className="text-textColor dark:text-white">Add</span> <span className="underline underline-offset-8">Movie</span></h2>
+                <MovieForm handleFormSubmit={addMovie}></MovieForm>
+            </section>
+        </>
     );
 };
 

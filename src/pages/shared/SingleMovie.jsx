@@ -25,7 +25,10 @@ const SingleMovie = ({ movie, setFavoriteMovies, deleteBtn = false }) => {
                         Swal.fire({
                             title: "Deleted!",
                             text: `"${title}" has been deleted.`,
-                            icon: "success"
+                            icon: "success",
+                            customClass: {
+                                confirmButton: 'alert-confirm-btn'
+                            }
                         });
 
                         axios.get(`/favorites?email=${user.email}`)

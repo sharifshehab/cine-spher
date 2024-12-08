@@ -10,7 +10,7 @@ import Registration from "../pages/Registration/Registration";
 import PrivateRoute from "./PrivateRoute";
 import MovieDetails from "../pages/MovieDetails/MovieDetails";
 import UpdateMovie from "../pages/UpdateMovie/UpdateMovie";
-import PricingPlans from "../pages/Home/PricingPlans/PricingPlans";
+import PricingPlans from "../pages/PricingPlans/PricingPlans";
 
 export const router = createBrowserRouter([
 

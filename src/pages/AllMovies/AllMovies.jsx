@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import SingleMovie from "../shared/SingleMovie";
 import useAxios from "../../hooks/useAxios";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const AllMovies = () => {
     const axios = useAxios();
@@ -43,6 +44,9 @@ const AllMovies = () => {
     }, [search])
 
     return (
+        <>
+        <Helmet> <title>Cine Sphere - All Movies</title> </Helmet>
+        
         <section className="container mx-auto px-5">
             <h2 className="text-secondaryColor text-center mb-16 text-5xl"><span className="text-textColor dark:text-white">All</span> <span className="underline underline-offset-8">Movies</span></h2>
 
@@ -80,8 +84,8 @@ const AllMovies = () => {
                     </div>
                 )
             }
-
-        </section>
+            </section>
+        </>
     );
 };
 

@@ -1,7 +1,5 @@
 // icons
 import { MdDone } from "react-icons/md";
-import { RxCross1 } from "react-icons/rx";
-
 const PricingPlans = () => {
     return (
         <section className="container mx-auto px-5">

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import ComingSoon from "./ComingSoon/ComingSoon";
 import FeaturedMovies from "./FeaturedMovies/FeaturedMovies";
 import NowInTheCinema from "./NowInTheCinema/NowInTheCinema";
@@ -7,6 +8,7 @@ const Home = () => {
 
     return (
         <>
+            <Helmet> <title>Cine Sphere - Journey to the Realm of Films</title> </Helmet>
             <section className="py-0">
                 <Slider></Slider>
             </section>

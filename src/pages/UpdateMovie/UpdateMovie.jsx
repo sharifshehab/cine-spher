@@ -3,6 +3,7 @@ import useAuth from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
 import MovieForm from "../shared/MovieForm";
 import { useLoaderData, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const UpdateMovie = () => {
     const axios = useAxios();
@@ -21,7 +22,7 @@ const UpdateMovie = () => {
             rating: data.rating,
             summary: data.summary
         }
-        console.log('new data',movie);
+        console.log('new data', movie);
 
         try {
             const response = await axios.put(`/movies/${id}`, movie);
@@ -33,7 +34,7 @@ const UpdateMovie = () => {
                     confirmButton: 'alert-confirm-btn'
                 }
             });
-            
+
             navigate(-1);
 
         } catch (error) {
@@ -49,10 +50,14 @@ const UpdateMovie = () => {
         }
     }
     return (
-        <section className="container mx-auto px-5">
-            <h2 className="text-secondaryColor text-center mb-16"><span className="text-textColor dark:text-white">Update</span> <span className="underline underline-offset-8">Movie</span></h2>
-            <MovieForm handleFormSubmit={updateMovie} currentData={preData[0]}></MovieForm>
-        </section>
+        <>
+            <Helmet> <title>Cine Sphere - Update Movie</title> </Helmet>
+
+            <section className="container mx-auto px-5">
+                <h2 className="text-secondaryColor text-center mb-16"><span className="text-textColor dark:text-white">Update</span> <span className="underline underline-offset-8">Movie</span></h2>
+                <MovieForm handleFormSubmit={updateMovie} currentData={preData[0]}></MovieForm>
+            </section>
+        </>
     );
 };
 
