@@ -32,12 +32,12 @@ body {
   line-height: 1.4;
   color: var(--text-color);
   background: none repeat scroll 0 0;
-  background-color: #ffffff;
+  background-color: #f5f5f5;
   margin: 0 auto;
 }
 
 main>section {
-    padding: 110px 0;
+    padding-top: 180px;
 }
 
 img {
@@ -78,4 +78,11 @@ display: inline ;
 
 .alert-confirm-btn{
   background-color: var(--primary-color);
+}
+
+/* genre card */
+.card.image-full::before {
+    border-radius: 0;
+    opacity: 0.5;   
+    background-color: rgba(0, 0, 0, 0.75) !important; 
 }

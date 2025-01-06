@@ -18,7 +18,7 @@ const NowInTheCinema = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-3">
 
                 <div className="rounded">
-                    <div className="grid grid-cols-12 w-full items-center bg-primaryColor text-white ">
+                    <div className="grid grid-cols-12 w-full items-center bg-primaryColor text-white">
                         <div className="grid col-span-5 justify-center gap-3 ">
                             <div>
                                 <h1 className="text-xl md:text-2xl text-textColor underline underline-offset-4 decoration-white">Gravity</h1>
@@ -38,7 +38,7 @@ const NowInTheCinema = () => {
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-between w-full p-4 bg-[#f5f5f5]">
+                    <div className="flex items-center justify-between w-full p-4 bg-white">
                         <div className="flex items-center gap-4 "> 
                             <FaHeart size={20}/>
                             <HiMiniShare className="text-[1.4rem] cursor-pointer" size={21} />
@@ -66,7 +66,7 @@ const NowInTheCinema = () => {
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-between w-full p-4 bg-[#f5f5f5] border-l-2 border-primaryColor">
+                    <div className="flex items-center justify-between w-full p-4 bg-white border-l-2 border-primaryColor">
                         <div className="flex items-center gap-4 "> 
                             <FaHeart size={20}/>
                             <HiMiniShare className="text-[1.4rem] cursor-pointer" size={21} />
@@ -94,7 +94,7 @@ const NowInTheCinema = () => {
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-between w-full p-4 bg-[#f5f5f5] border-l-2 border-primaryColor">
+                    <div className="flex items-center justify-between w-full p-4 bg-white border-l-2 border-primaryColor">
                         <div className="flex items-center gap-4 "> 
                             <FaHeart size={20}/>
                             <HiMiniShare className="text-[1.4rem] cursor-pointer" size={21} />
@@ -122,7 +122,7 @@ const NowInTheCinema = () => {
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-between w-full p-4 bg-[#f5f5f5]">
+                    <div className="flex items-center justify-between w-full p-4 bg-white">
                         <div className="flex items-center gap-4 "> 
                             <FaHeart size={20}/>
                             <HiMiniShare className="text-[1.4rem] cursor-pointer" size={21} />
@@ -150,7 +150,7 @@ const NowInTheCinema = () => {
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-between w-full p-4 bg-[#f5f5f5] border-l-2 border-primaryColor">
+                    <div className="flex items-center justify-between w-full p-4 bg-white border-l-2 border-primaryColor">
                         <div className="flex items-center gap-4 "> 
                             <FaHeart size={20}/>
                             <HiMiniShare className="text-[1.4rem] cursor-pointer" size={21} />
@@ -178,7 +178,7 @@ const NowInTheCinema = () => {
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-between w-full p-4 bg-[#f5f5f5] border-l-2 border-primaryColor">
+                    <div className="flex items-center justify-between w-full p-4 bg-white border-l-2 border-primaryColor">
                         <div className="flex items-center gap-4 "> 
                             <FaHeart size={20}/>
                             <HiMiniShare className="text-[1.4rem] cursor-pointer" size={21} />

@@ -3,6 +3,8 @@ import ComingSoon from "./ComingSoon/ComingSoon";
 import FeaturedMovies from "./FeaturedMovies/FeaturedMovies";
 import NowInTheCinema from "./NowInTheCinema/NowInTheCinema";
 import Slider from "./Slider/Slider";
+import Categoryes from "./Categoryes/Categoryes";
+import Testimonial from "./Testimonial/Testimonial";
 
 const Home = () => {
 
@@ -13,6 +15,10 @@ const Home = () => {
                 <Slider></Slider>
             </section>
             
+            <section className="container mx-auto px-5 pt-0">
+                <Categoryes></Categoryes>
+            </section>
+
             <section className="container mx-auto px-5">
                 <FeaturedMovies></FeaturedMovies>
             </section>
@@ -21,8 +27,12 @@ const Home = () => {
                 <NowInTheCinema></NowInTheCinema>
             </section>
 
-            <section className="pb-0">
+            <section>
                 <ComingSoon></ComingSoon>
+            </section>
+
+            <section className="pb-52">
+                <Testimonial />
             </section>
         </>
     );

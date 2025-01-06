@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import down from '../../../assets/Animation - 1736130822375.gif';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
@@ -37,7 +39,7 @@ const Slider = () => {
             >
                 <SwiperSlide>
                     <div className='relative flex items-center justify-center'>
-                        <img src={sliderMoana} className='w-full h-[450px] md:h-[750px] object-cover' />
+                        <img src={sliderMoana} className='w-full h-[450px] md:h-2/3 object-cover' />
                         {/* image overlay */}
                         <div className='absolute inset-0 bg-black bg-opacity-40'></div>
 
@@ -63,7 +65,7 @@ const Slider = () => {
 
                 <SwiperSlide>
                     <div className='relative flex items-center justify-center'>
-                        <img src={sliderInterstellar} className='w-full h-[450px] md:h-[750px] object-cover' />
+                        <img src={sliderInterstellar} className='w-full h-[450px] md:h-2/3 object-cover' />
                         {/* image over lay */}
                         <div className='absolute inset-0 bg-black bg-opacity-40'></div>
 
@@ -89,7 +91,7 @@ const Slider = () => {
 
                 <SwiperSlide>
                     <div className='relative flex items-center justify-center'>
-                        <img src={sliderGodzilla} className='w-full h-[450px] md:h-[750px] object-cover' />
+                        <img src={sliderGodzilla} className='w-full h-[450px] md:h-2/3 object-cover' />
                         {/* image over lay */}
                         <div className='absolute inset-0 bg-black bg-opacity-40'></div>
 
@@ -136,6 +138,10 @@ const Slider = () => {
                 </SwiperSlide>
 
             </Swiper>
+
+            <div className=''>
+                <img src={down} alt="" className='pt-2 w-16 mx-auto' />
+            </div>
         </>
     );
 };

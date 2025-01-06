@@ -3,38 +3,38 @@ import { FaFacebookF, FaLinkedinIn, FaPinterestP, FaBehance } from "react-icons/
 const Footer = () => {
     return (
         <>
-            <footer className="footer bg-[#f5f5f5] text-base-content p-10 dark:bg-gray-900 dark:border-t-2 border-primaryColor">
+            <footer className="footer bg-textColor text-base-content p-10 dark:bg-gray-900 dark:border-t-2 border-primaryColor">
                 <div className="container mx-auto flex flex-wrap flex-col md:flex-row justify-between space-y-7">
                     <aside>
-                        <a className="text-3xl dark:text-white">Cine <span className="text-secondaryColor underline">Sphere</span></a>
-                        <p className="mt-3 dark:text-white">
+                        <a className="text-3xl text-white dark:text-white">Cine <span className="text-secondaryColor underline">Sphere</span></a>
+                        <p className="mt-3 text-white dark:text-white">
                             Cine Sphere.
                             <br />
                             Providing high-quality entertainment from reliable source
                         </p>
                     </aside>
                     {/* logo */}
-                    <nav className="flex flex-col space-y-3 dark:text-white">
-                        <h6 className="footer-title  ">About</h6>
+                    <nav className="flex flex-col space-y-3 text-white dark:text-white">
+                        <h6 className="text-primaryColor text-lg underline underline-offset-8 decoration-2 decoration-white">About</h6>
                         <a className="link link-hover">Blog</a>
                         <a className="link link-hover">Contact</a>
                         <a className="link link-hover">About us</a>
                     </nav>
                     {/* links */}
-                    <nav className="flex flex-col space-y-3 dark:text-white">
-                        <h6 className="footer-title">Legal</h6>
+                    <nav className="flex flex-col space-y-3 text-white dark:text-white">
+                        <h6 className="text-primaryColor text-lg underline underline-offset-8 decoration-2 decoration-white">Legal</h6>
                         <a className="link link-hover">FAQ's</a>
                         <a className="link link-hover">Privacy Policy</a>
                         <a className="link link-hover">Refund</a>
                     </nav>
                     {/* links */}
                     <form>
-                        <h6 className="footer-title dark:text-white">Newsletter</h6>
+                        <h6 className="text-primaryColor text-lg underline underline-offset-8 decoration-2 decoration-white dark:text-white">Newsletter</h6>
                         <fieldset className="form-control w-80">
-                            <label className="label">
-                                <span className="label-text dark:text-white">Enter your email address</span>
+                            <label className="label pl-0">
+                                <span className="label-text text-white dark:text-white">Enter your email address</span>
                             </label>
-                            <div className="join">
+                            <div className="join rounded-none">
                                 <input
                                     type="text"
                                     placeholder="username@site.com"
@@ -59,16 +59,16 @@ const Footer = () => {
                     <div className="grid grid-flow-col gap-4">
    
                         {/* social media */}
-                        <a href="https://www.facebook.com/svshuvo.4.0">
+                        <a href="https://www.facebook.com/svshuvo.4.0" target="_blank">
                             <FaFacebookF size={18} />
                         </a>
-                        <a href="https://www.linkedin.com/in/sharifshehab">
+                        <a href="https://www.linkedin.com/in/sharifshehab" target="_blank">
                             <FaLinkedinIn size={20} />
                         </a>
-                        <a href="https://www.behance.net/onwebdesk">
+                        <a href="https://www.behance.net/onwebdesk" target="_blank">
                             <FaBehance size={20} />
                         </a>
-                        <a href="https://www.pinterest.com/onlywebdesk">
+                        <a href="https://www.pinterest.com/onlywebdesk" target="_blank">
                             <FaPinterestP size={20} />
                         </a>
                     </div>

@@ -10,7 +10,7 @@ const ComingSoon = () => {
             <div className="container mx-auto px-5 relative">
                 {/* header */}
                 < header className="flex lg:flex-row flex-col gap-[50px] lg:gap-0 items-center lg:mt-3" >
-                    <div className="px-8 mt-8 lg:mt-0 w-full lg:w-[50%]">
+                    <div className=" mt-8 lg:mt-0 w-full lg:w-[50%]">
                         <span className="text-primaryColor border-b block underline underline-offset-4 decoration-4">Coming soon</span>
                         <h1 className="text-4xl md:text-6xl font-semibold leading-snug text-white">Smoking Shadow</h1>
                         <p className="text-slate-300 mt-2">
