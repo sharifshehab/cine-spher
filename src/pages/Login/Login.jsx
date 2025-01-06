@@ -48,7 +48,7 @@ const Login = () => {
         <>
             <Helmet> <title>Cine Sphere - User Login</title> </Helmet>
 
-            <section className="container mx-auto px-5 ">
+            <section className="container mx-auto px-5 pb-52">
                 <h2 className="text-secondaryColor text-center"><span className="text-textColor dark:text-white">User </span><span className="underline underline-offset-8">Login</span></h2>
                 <div className="min-h-80 flex items-center justify-center">
                     <div className="w-[500px]">
@@ -63,7 +63,7 @@ const Login = () => {
                                     </label>
                                     <input type="email" {...register("email", {
                                         required: "Can't leave email empty"
-                                    })} placeholder="Write your email" className="ps-2 border-[#e5eaf2] border-b outline-none  py-1 focus:border-secondaryColor transition-colors duration-300"
+                                    })} placeholder="Write your email" className="ps-2 bg-transparent border-primaryColor border-b outline-none  py-1 focus:border-textColor transition-colors duration-300 dark:text-white"
                                     />
                                     {errors.email && (<span className="text-red-500 text-sm">{errors.email?.message}</span>)}
                                 </div>
@@ -75,12 +75,9 @@ const Login = () => {
                                             Password
                                         </span>
                                     </label>
-                                    <input type="password" {...register("password", { required: "Can't leave password empty" })} placeholder="Write your password" className="ps-2 border-[#e5eaf2] border-b outline-none py-1 focus:border-secondaryColor transition-colors duration-300"
+                                    <input type="password" {...register("password", { required: "Can't leave password empty" })} placeholder="Write your password" className="ps-2 bg-transparent border-primaryColor border-b outline-none  py-1 focus:border-textColor transition-colors duration-300 dark:text-white"
                                     />
                                     {errors.password && (<span className="text-red-500 text-sm">{errors.password?.message}</span>)}
-                                </div>
-                                <div className="text-right">
-                                    <a href="#" className="dark:text-primaryColor">Forget Password</a>
                                 </div>
                             </div>
                             <div className="text-center mt-8">

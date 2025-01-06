@@ -97,15 +97,12 @@ const MovieDetails = () => {
         <>
             <Helmet> <title>Cine Sphere - Movie Details</title> </Helmet>
 
-            <section className="container mx-auto px-5">
-
-             
-
-                    <div className="bg-[#f5f5f5]  flex flex-col md:flex-row items-center rounded">
+            <section className="container mx-auto px-5 pb-52">
+                    <div className="bg-[#f5f5f5]  flex flex-col md:flex-row items-center">
 
                         {/* left side */}
                         <div className="flex flex-col p-4 lg:p-5 gap-5 basis-5/6">
-                            <div className="w-full shadow-md rounded bg-white">
+                            <div className="w-full shadow-md bg-white">
                                 <div className="text-center py-6">
                                     <h2 className="underline underline-offset-8 decoration-primaryColor">{title}</h2>
                                 </div>
@@ -125,7 +122,7 @@ const MovieDetails = () => {
                         <div>
                             <Link to={`/all-movies`}>
                                 <button
-                                    className="relative w-full inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-primary transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-primaryColor group">
+                                    className="relative w-full inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-primary transition-all duration-150 ease-in-out hover:pl-10 hover:pr-6 bg-primaryColor group">
                                     <span
                                         className="absolute bottom-0 left-0 w-full  transition-all duration-150 ease-in-out bg-textColor group-hover:h-full dark:bg-white"></span>
                                     <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
@@ -150,9 +147,9 @@ const MovieDetails = () => {
                         <div
                             className="border-l-2 border-dashed border-gray-200 p-5  flex items-center justify-center gap-7">
 
-                            <div className="border border-[#e5eaf2] rounded w-full bg-white p-2 ">
+                            <div className="border border-[#e5eaf2] w-full bg-white p-2 ">
 
-                                <div className="bg-primaryColor rounded p-4 text-center ">
+                                <div className="bg-primaryColor p-4 text-center ">
                                     <h4 className="text-2xl text-textColor underline underline-offset-8 decoration-white">
                                         Movie Info
                                     </h4>
@@ -187,7 +184,7 @@ const MovieDetails = () => {
                                     <div className="my-5 flex items-center justify-between gap-3">
                                         {/* left */}
                                         <button onClick={() => deleteMovie(_id)}
-                                            className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group">
+                                            className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold transition-all duration-150 ease-in-out hover:pl-10 hover:pr-6 bg-gray-50 group">
                                             <span
                                                 className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-secondaryColor group-hover:h-full"></span>
                                             <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
@@ -205,7 +202,7 @@ const MovieDetails = () => {
                                         {/* right */}
                                         <Link to={`/update-movie/${_id}`}>
                                             <button
-                                                className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group">
+                                                className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold transition-all duration-150 ease-in-out hover:pl-10 hover:pr-6 bg-gray-50 group">
                                                 <span
                                                     className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-secondaryColor group-hover:h-full"></span>
                                                 <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
@@ -222,7 +219,7 @@ const MovieDetails = () => {
                                     </div>
 
                                     <button onClick={addToFavorite}
-                                        className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group w-full">
+                                        className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold transition-all duration-150 ease-in-out hover:pl-10 hover:pr-6 bg-gray-50 group w-full">
                                         <span
                                             className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-secondaryColor group-hover:h-full"></span>
                                         <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">

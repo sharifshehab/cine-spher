@@ -11,6 +11,10 @@ import PrivateRoute from "./PrivateRoute";
 import MovieDetails from "../pages/MovieDetails/MovieDetails";
 import UpdateMovie from "../pages/UpdateMovie/UpdateMovie";
 import PricingPlans from "../pages/PricingPlans/PricingPlans";
+import Contact from "../pages/Contact/Contact";
+import Faq from "../pages/Faq/Faq";
+import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
+import Refund from "../pages/Refund/Refund";
 
 export const router = createBrowserRouter([
 
@@ -58,6 +62,10 @@ export const router = createBrowserRouter([
                 element: <PricingPlans></PricingPlans>
             },
             {
+                path: 'contact',
+                element: <Contact></Contact>
+            },
+            {
                 path: 'login',
                 element: <Login></Login>
             },
@@ -65,6 +73,18 @@ export const router = createBrowserRouter([
                 path: 'registration',
                 element: <Registration></Registration>
             },
+            {
+                path: 'faq',
+                element: <Faq></Faq>
+            },
+            {
+                path: 'privacy-policy',
+                element: <PrivacyPolicy></PrivacyPolicy>
+            },
+            {
+                path: 'refund',
+                element: <Refund></Refund>
+            }
         ]
     }
 ]);

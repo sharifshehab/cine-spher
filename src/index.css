@@ -86,3 +86,11 @@ display: inline ;
     opacity: 0.5;   
     background-color: rgba(0, 0, 0, 0.75) !important; 
 }
+
+.css-13cymwt-control {
+  background: transparent !important;
+}
+
+.w-full.bg-transparent.border-b.movie-form.css-b62m3t-container {
+  border-color: var(--primary-color);
+}

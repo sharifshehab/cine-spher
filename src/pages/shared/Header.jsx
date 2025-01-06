@@ -4,7 +4,7 @@ import { IoSunnyOutline } from "react-icons/io5";
 
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Sticky from "react-stickynode";
 
 
@@ -13,25 +13,40 @@ const Header = () => {
     const { user, handleLogOut, loading } = useAuth();
     const [dark, setDark] = useState(false);
 
+    useEffect(() => {
+        const storedDarkMode = localStorage.getItem("darkMode") === "true";
+        setDark(storedDarkMode);
+
+        if (storedDarkMode) {
+            document.body.classList.add("dark");
+        } else {
+            document.body.classList.remove("dark");
+        }
+    }, [])
+
     const darkModeHandler = () => {
-        setDark(!dark);
-        document.body.classList.toggle("dark");
+        const newDarkMode = !dark;
+        setDark(newDarkMode);
+        document.body.classList.toggle("dark", newDarkMode);
+        localStorage.setItem("darkMode", newDarkMode);
     }
 
     const menuItems =
         <>
             <li><NavLink className={({ isActive }) => isActive ? 'underline underline-offset-8 decoration-white decoration-2 focus:bg-transparent dark:text-primaryColor' : 'hover:underline underline-offset-8 decoration-white decoration-2 hover:bg-transparent dark:text-white'} to={'/'} end>Home</NavLink></li>
             <li><NavLink className={({ isActive }) => isActive ? 'underline underline-offset-8 decoration-white decoration-2 focus:bg-transparent dark:text-primaryColor' : 'hover:underline underline-offset-8 decoration-white decoration-2 hover:bg-transparent dark:text-white'} to={'/all-movies'}>All Movies</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? 'underline underline-offset-8 decoration-white decoration-2 focus:bg-transparent dark:text-primaryColor' : 'hover:underline underline-offset-8 decoration-white decoration-2 hover:bg-transparent dark:text-white'} to={'/add-movie'}>Add Movie</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? 'underline underline-offset-8 decoration-white decoration-2 focus:bg-transparent dark:text-primaryColor' : 'hover:underline underline-offset-8 decoration-white decoration-2 hover:bg-transparent dark:text-white'} to={'/favorite-movies'}>My Favorites</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? 'underline underline-offset-8 decoration-white decoration-2 focus:bg-transparent dark:text-primaryColor' : 'hover:underline underline-offset-8 decoration-white decoration-2 hover:bg-transparent dark:text-white'} to={'/plans'}>Our Plans</NavLink></li>
-
-            {/* TODO */}
-            <li><a href="#">Contact</a></li>
+            { user && 
+                <>
+                    <li><NavLink className={({ isActive }) => isActive ? 'underline underline-offset-8 decoration-white decoration-2 focus:bg-transparent dark:text-primaryColor' : 'hover:underline underline-offset-8 decoration-white decoration-2 hover:bg-transparent dark:text-white'} to={'/add-movie'}>Add Movie</NavLink></li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'underline underline-offset-8 decoration-white decoration-2 focus:bg-transparent dark:text-primaryColor' : 'hover:underline underline-offset-8 decoration-white decoration-2 hover:bg-transparent dark:text-white'} to={'/favorite-movies'}>My Favorites</NavLink></li>
+                </>
+            }
+            <li><NavLink className={({ isActive }) => isActive ? 'underline underline-offset-8 decoration-white decoration-2 focus:bg-transparent dark:text-primaryColor' : 'hover:underline underline-offset-8 decoration-white decoration-2 hover:bg-transparent dark:text-white'} to={'/plans'}>Pricing</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'underline underline-offset-8 decoration-white decoration-2 focus:bg-transparent dark:text-primaryColor' : 'hover:underline underline-offset-8 decoration-white decoration-2 hover:bg-transparent dark:text-white'} to={'/contact'}>Contact</NavLink></li>
         </>
 
     return (
-        <Sticky innerZ={15}>
+        <Sticky innerZ={25}>
             <header className="bg-primaryColor dark:bg-gray-900 dark:border-b dark:border-primaryColor">
 
                 <div className="navbar py-4 container mx-auto px-5">
@@ -63,7 +78,8 @@ const Header = () => {
                                 <div className="w-10 rounded-full">
                                     {loading ? <span className="loading loading-spinner loading-md text-warning"></span> : <img
                                         alt={user?.displayName}
-                                        src={user?.photoURL} />}
+                                        src={user?.photoURL}
+                                        referrerPolicy="no-referrer"/>}
                                 </div>
                             </div>
 
@@ -76,14 +92,14 @@ const Header = () => {
                             (<div className="items-center flex dark:text-white">
                                 <Link to={'/login'}>
                                     <button
-                                        className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize hover:text-primaryColor hover:underline transition-all duration-300">Log
+                                        className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize hover:text-white hover:underline transition-all duration-300">Log
                                         in
                                     </button>
                                 </Link>
                                 <span className="text-gray-500">/</span>
                                 <Link to={'/registration'}>
                                     <button
-                                        className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize hover:text-primaryColor hover:underline transition-all duration-300">Register
+                                        className="py-[7px] text-[1rem] px-[16px] rounded-full capitalize hover:text-white hover:underline transition-all duration-300">Register
                                     </button>
                                 </Link>
                             </div>)
@@ -94,7 +110,7 @@ const Header = () => {
                         {/* toggle DarkMode  */}
                         <button onClick={() => darkModeHandler()}>
                             {
-                                dark ? <IoMoonOutline size={28} className="text-white" /> : <IoSunnyOutline size={28} />
+                                dark ? <IoMoonOutline size={23} className="text-white" /> : <IoSunnyOutline size={23} />
                             }
                         </button>
                     </div>

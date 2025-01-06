@@ -47,7 +47,7 @@ const AddMovie = () => {
     return (
         <>
             <Helmet> <title>Cine Sphere - Add Movies</title> </Helmet>
-            <section className="container mx-auto px-5">
+            <section className="container mx-auto px-5 pb-52">
                 <h2 className="text-secondaryColor text-center mb-16"><span className="text-textColor dark:text-white">Add</span> <span className="underline underline-offset-8">Movie</span></h2>
                 <MovieForm handleFormSubmit={addMovie}></MovieForm>
             </section>

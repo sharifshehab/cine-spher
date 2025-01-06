@@ -7,11 +7,12 @@ import { Helmet } from "react-helmet-async";
 const AllMovies = () => {
     const axios = useAxios();
     const [movies, setMovies] = useState([]);
+    const [sortOrder, setSortOrder] = useState('desc');
     const [loading, setLoading] = useState(true);
     const [search, setSearch] = useState('');
 
     useEffect(() => {
-        axios.get('/movies')
+        axios.get(`/movies?sortBy=${sortOrder}`)
             .then(data => {
                 setMovies(data.data);
                 setLoading(false);
@@ -27,7 +28,7 @@ const AllMovies = () => {
                     }
                 });
             });
-    }, []);
+    }, [sortOrder, setSortOrder]);
 
     const handleSearch = e => {
         e.preventDefault();
@@ -40,50 +41,62 @@ const AllMovies = () => {
         axios.get(`/movies?search=${search}`)
             .then(response => {
                 setMovies(response.data)
-        })
+            })
     }, [search])
 
     return (
         <>
-        <Helmet> <title>Cine Sphere - All Movies</title> </Helmet>
-        
-        <section className="container mx-auto px-5">
-            <h2 className="text-secondaryColor text-center mb-16 text-5xl"><span className="text-textColor dark:text-white">All</span> <span className="underline underline-offset-8">Movies</span></h2>
+            <Helmet> <title>Cine Sphere - All Movies</title> </Helmet>
 
-            <form action="#" onSubmit={handleSearch}>
-                <label className="input input-bordered flex items-center gap-2">
-                    <input
-                        type="text"
-                        className="grow"
-                        name="search"
-                        placeholder="Search"
-                    />
-                    <button type="submit" className="flex items-center justify-center h-8 w-8 opacity-70">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 16 16"
-                            fill="currentColor"
-                            className="h-4 w-4">
-                            <path
-                                fillRule="evenodd"
-                                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                                clipRule="evenodd" />
-                        </svg>
-                    </button>
-                </label>
-            </form>
-            
-            {loading ? (<p className="text-center"><span className="loading loading-spinner loading-lg text-primaryColor"></span></p>)
-                : (
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16 mt-10">
-                        {
-                            movies.length > 0 ? (movies.map(movie => <SingleMovie key={movie._id} movie={movie}></SingleMovie>))
-                                :
-                                (<p className="text-center col-span-full">No movies found</p>)
-                        }
-                    </div>
-                )
-            }
+            <section className="container mx-auto px-5 pb-52">
+                <h2 className="text-secondaryColor text-center mb-16 text-5xl"><span className="text-textColor dark:text-white">All</span> <span className="underline underline-offset-8">Movies</span></h2>
+
+                <form action="#" onSubmit={handleSearch}>
+                    <label className="input input-bordered flex items-center gap-2 rounded-none">
+                            <input
+                                type="text"
+                                className="grow"
+                                name="search"
+                                placeholder="Search"
+                            />
+                            <button type="submit" className="flex items-center justify-center h-8 w-8 opacity-70">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16"
+                                    fill="currentColor"
+                                    className="h-4 w-4">
+                                    <path
+                                        fillRule="evenodd"
+                                        d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                                        clipRule="evenodd" />
+                                </svg>
+                            </button>
+                        </label>
+                </form>
+
+                <div className="flex items-center justify-between mt-5">
+                    <h4 className="text-2xl underline underline-offset-8 decoration-2 decoration-primaryColor dark:text-white">Total Movies: {movies.length}</h4>
+                    <select
+                        value={sortOrder}
+                        onChange={(e) => setSortOrder(e.target.value)}
+                        className="border p-2 focus-visible:outline-none focus-visible:border focus-visible:border-primaryColor"
+                    >
+                        <option value="asc">Ascending</option>
+                        <option value="desc">Descending</option>
+                    </select>
+                </div>
+
+                {loading ? (<p className="text-center"><span className="loading loading-spinner loading-lg text-primaryColor h-screen"></span></p>)
+                    : (
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16 mt-10">
+                            {
+                                movies.length > 0 ? (movies.map(movie => <SingleMovie key={movie._id} movie={movie}></SingleMovie>))
+                                    :
+                                    (<p className="text-center col-span-full">No movies found</p>)
+                            }
+                        </div>
+                    )
+                }
             </section>
         </>
     );

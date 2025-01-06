@@ -8,7 +8,7 @@ const PricingPlans = () => {
         <>
             <Helmet> <title>Cine Sphere - Pricing Plans</title> </Helmet>
 
-            <section className="container mx-auto px-5">
+            <section className="container mx-auto px-5 pb-52">
                 <h2 className="text-secondaryColor text-center mb-16 text-5xl"><span className="text-textColor dark:text-white">Get Our Exiting </span> <span className="underline underline-offset-8">Plans</span></h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">

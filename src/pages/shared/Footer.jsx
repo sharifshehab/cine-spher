@@ -1,4 +1,5 @@
 import { FaFacebookF, FaLinkedinIn, FaPinterestP, FaBehance } from "react-icons/fa6";
+import { Link, Links } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -15,17 +16,19 @@ const Footer = () => {
                     </aside>
                     {/* logo */}
                     <nav className="flex flex-col space-y-3 text-white dark:text-white">
-                        <h6 className="text-primaryColor text-lg underline underline-offset-8 decoration-2 decoration-white">About</h6>
-                        <a className="link link-hover">Blog</a>
+                        <h6 className="text-primaryColor text-lg underline underline-offset-8 decoration-2 decoration-white">Services</h6>
+                        <Link to={'/all-movies'} className="link link-hover">All Movies</Link>
+                        <Link to={'/plans'} className="link link-hover">Pricing Plans</Link>
+                        
+                        {/* TODO */}
                         <a className="link link-hover">Contact</a>
-                        <a className="link link-hover">About us</a>
                     </nav>
                     {/* links */}
                     <nav className="flex flex-col space-y-3 text-white dark:text-white">
                         <h6 className="text-primaryColor text-lg underline underline-offset-8 decoration-2 decoration-white">Legal</h6>
-                        <a className="link link-hover">FAQ's</a>
-                        <a className="link link-hover">Privacy Policy</a>
-                        <a className="link link-hover">Refund</a>
+                        <Link to={'/faq'} className="link link-hover">FAQ's</Link>
+                        <Link to={'/privacy-policy'} className="link link-hover">Privacy Policy</Link>
+                        <Link to={'/refund'} className="link link-hover">Refund</Link>
                     </nav>
                     {/* links */}
                     <form>
@@ -50,7 +53,7 @@ const Footer = () => {
             <footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-2">
                 <aside className="grid-flow-col items-center">
                     <p className="">
-                       Copyright © 2024 
+                       Copyright © {new Date().getFullYear()} 
                         <br />
                         All right reserved by Cine Sphere.
                     </p>

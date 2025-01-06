@@ -72,7 +72,7 @@ const Registration = () => {
     return (
         <>
             <Helmet> <title>Cine Sphere - User Registration</title> </Helmet>
-            <section className="container mx-auto px-5">
+            <section className="container mx-auto px-5 pb-52">
                 <h2 className="text-secondaryColor text-center"><span className="text-textColor dark:text-white">User </span><span className="underline underline-offset-8">Register</span></h2>
 
                 <form className="w-full mt-[50px] space-y-6" onSubmit={handleSubmit(onSubmit)}>
@@ -87,7 +87,7 @@ const Registration = () => {
                             </label>
                             <input type="email" {...register("email", {
                                 required: "Can't leave email empty"
-                            })} placeholder="Write your email" className="ps-2 border-[#e5eaf2] border-b outline-none  py-1 focus:border-secondaryColor transition-colors duration-300"
+                            })} placeholder="Write your email" className="ps-2 bg-transparent border-primaryColor border-b outline-none  py-1 focus:border-textColor transition-colors duration-300 dark:text-white"
                             />
                             {errors.email && (<span className="text-red-500 text-sm">{errors.email?.message}</span>)}
                         </div>
@@ -98,7 +98,7 @@ const Registration = () => {
                                     Name
                                 </span>
                             </label>
-                            <input type="text" {...register("name", { required: "Can't leave name empty" })} placeholder="Write your name" className="ps-2 border-[#e5eaf2] border-b outline-none py-1 focus:border-secondaryColor transition-colors duration-300"
+                            <input type="text" {...register("name", { required: "Can't leave name empty" })} placeholder="Write your name" className="ps-2 bg-transparent border-primaryColor border-b outline-none  py-1 focus:border-textColor transition-colors duration-300 dark:text-white"
                             />
                             {errors.name && (<span className="text-red-500 text-sm">{errors.name?.message}</span>)}
                         </div>
@@ -118,7 +118,7 @@ const Registration = () => {
                                     value: /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i,
                                     message: "Enter a valid URL"
                                 }
-                            })} placeholder="Past photo URL" className="ps-2 border-[#e5eaf2] border-b outline-none  py-1 focus:border-secondaryColor transition-colors duration-300"
+                            })} placeholder="Past photo URL" className="ps-2 bg-transparent border-primaryColor border-b outline-none  py-1 focus:border-textColor transition-colors duration-300 dark:text-white"
                             />
                             {errors.photo && (<span className="text-red-500 text-sm">{errors.photo?.message}</span>)}
                         </div>
@@ -134,7 +134,7 @@ const Registration = () => {
                                     value: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
                                     message: "Password must have an uppercase letter, lowercase letter and at least 6 character"
                                 }
-                            })} placeholder="Write your password" className="ps-2 border-[#e5eaf2] border-b outline-none py-1 focus:border-secondaryColor transition-colors duration-300"
+                            })} placeholder="Write your password" className="ps-2 bg-transparent border-primaryColor border-b outline-none  py-1 focus:border-textColor transition-colors duration-300 dark:text-white"
                             />
                             {errors.password && (<span className="text-red-500 text-sm">{errors.password?.message}</span>)}
                         </div>
