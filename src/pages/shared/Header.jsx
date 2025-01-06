@@ -19,15 +19,15 @@ const Header = () => {
 
     const menuItems =
         <>
-            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent focus:text-secondaryColor' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/'} end>Home</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent focus:text-secondaryColor' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/all-movies'}>All Movies</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent focus:text-secondaryColor' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/add-movie'}>Add Movie</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent focus:text-secondaryColor' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/favorite-movies'}>My Favorites</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? 'text-secondaryColor focus:bg-transparent focus:text-secondaryColor' : 'hover:text-primaryColor hover:bg-transparent dark:text-white'} to={'/plans'}>Our Plans</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'underline underline-offset-8 decoration-white decoration-2 focus:bg-transparent dark:text-primaryColor' : 'hover:underline underline-offset-8 decoration-white decoration-2 hover:bg-transparent dark:text-white'} to={'/'} end>Home</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'underline underline-offset-8 decoration-white decoration-2 focus:bg-transparent dark:text-primaryColor' : 'hover:underline underline-offset-8 decoration-white decoration-2 hover:bg-transparent dark:text-white'} to={'/all-movies'}>All Movies</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'underline underline-offset-8 decoration-white decoration-2 focus:bg-transparent dark:text-primaryColor' : 'hover:underline underline-offset-8 decoration-white decoration-2 hover:bg-transparent dark:text-white'} to={'/add-movie'}>Add Movie</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'underline underline-offset-8 decoration-white decoration-2 focus:bg-transparent dark:text-primaryColor' : 'hover:underline underline-offset-8 decoration-white decoration-2 hover:bg-transparent dark:text-white'} to={'/favorite-movies'}>My Favorites</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'underline underline-offset-8 decoration-white decoration-2 focus:bg-transparent dark:text-primaryColor' : 'hover:underline underline-offset-8 decoration-white decoration-2 hover:bg-transparent dark:text-white'} to={'/plans'}>Our Plans</NavLink></li>
         </>
 
     return (
-        <header className="bg-[#f5f5f5] dark:bg-gray-900 dark:border-b dark:border-primaryColor">
+        <header className="bg-primaryColor dark:bg-gray-900 dark:border-b dark:border-primaryColor">
 
             <div className="navbar py-4 container mx-auto px-5">
                 <div className="navbar-start">
@@ -43,7 +43,7 @@ const Header = () => {
                         </ul>
                     </div>
 
-                    <a className="text-3xl dark:text-white">Cine <span className="text-secondaryColor underline">Sphere</span></a>
+                    <a className="text-3xl dark:text-white">Cine <span className="text-white underline dark:text-primaryColor">Sphere</span></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal text-base px-1">
