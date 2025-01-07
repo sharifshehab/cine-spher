@@ -32,7 +32,7 @@ const Slider = () => {
                     delay: 2000,
                     disableOnInteraction: false,
                 }}
-                navigation={true}
+                navigation={false}
                 thumbs={{ swiper: thumbsSwiper }}
                 modules={[Autoplay, FreeMode, Navigation, Thumbs]}
                 className="cine-slider"
