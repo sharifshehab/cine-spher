@@ -7,7 +7,7 @@ const Faq = () => {
             <section className="container mx-auto px-5 pb-52">
                 <h2 className="text-secondaryColor text-center mb-16 text-5xl"><span className="text-textColor dark:text-white">Frequently Asked</span> <span className="underline underline-offset-8">Questions</span></h2>
 
-                <div className="space-y-5">
+                <div className="space-y-5 dark:text-white">
                     <div>
                         <h4 className="text-2xl font-semibold">1. What is CineSphere?</h4>
                         <p>CineSphere is a premium movie streaming platform offering a wide range of movies from various genres and eras. You can stream your favorite films anytime, anywhere, on multiple devices.</p>

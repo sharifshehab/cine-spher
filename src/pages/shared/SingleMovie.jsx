@@ -5,7 +5,8 @@ import useAuth from "../../hooks/useAuth";
 
 const SingleMovie = ({ movie, setFavoriteMovies, deleteBtn = false }) => {
     const { user } = useAuth();
-    const { _id, title, duration, poster, genre, releaseYear, rating } = movie;
+    const { _id, title, duration, poster, genre, releaseYear, rating, summary } = movie;
+
     const axios = useAxios();
 
     const deleteFavoriteMovie = (id) => {
@@ -55,7 +56,7 @@ const SingleMovie = ({ movie, setFavoriteMovies, deleteBtn = false }) => {
         <div className="bg-white flex flex-col">
             <div className="p-4 flex-grow">
                 <h2 className="font-[500] text-[1.2rem]">{title}</h2>
-                <p className="text-[#424242] text-[0.9rem]">Duration: {duration} min</p>
+              {/*   <p className="text-[#424242] text-[0.9rem]">Duration: {duration} min</p> */}
             </div>
 
             <img
@@ -66,12 +67,15 @@ const SingleMovie = ({ movie, setFavoriteMovies, deleteBtn = false }) => {
 
             <div className="flex flex-col w-full p-4 ">
                 <div className="space-y-2 mb-5">
-                    <div><h4>Genre: {
+
+{/*                     <div><h4>Genre: {
                         genre.map((item, idx) => <span key={idx}>{item}{idx < genre.length - 1 && ', '}</span>)
                     }</h4></div>
-
                     <div><h4>Release Year: {releaseYear}</h4></div>
-                    <div><h4>Rating: {rating} star</h4>
+                    <div><h4>Rating: {rating} star</h4></div> */}
+
+                    <div>
+                        <p>Description: {summary.slice(0, 40)}...</p>
                     </div>
                 </div>
 

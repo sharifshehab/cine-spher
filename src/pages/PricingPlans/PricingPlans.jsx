@@ -20,7 +20,7 @@ const PricingPlans = () => {
 
                             <div className="flex mt-6 gap-1">
                                 <h2 className="text-primaryColor text-6xl font-bold ">49.50</h2>
-                                <span className="text-[1.2rem] font-[500]">$</span>
+                                <span className="text-[1.2rem] font-[500] dark:text-white">$</span>
                             </div>
                             <p className="text-[#424242] text-[0.9rem] dark:text-white">per month</p>
 
@@ -53,7 +53,7 @@ const PricingPlans = () => {
 
                             <div className="flex mt-6 gap-1">
                                 <h2 className="text-primaryColor text-6xl font-bold ">99.99</h2>
-                                <span className="text-[1.2rem] font-[500]">$</span>
+                                <span className="text-[1.2rem] font-[500] dark:text-white">$</span>
                             </div>
                             <p className="text-[#424242] text-[0.9rem] dark:text-white">per month</p>
 
@@ -86,7 +86,7 @@ const PricingPlans = () => {
 
                             <div className="flex mt-6 gap-1">
                                 <h2 className="text-primaryColor text-6xl font-bold ">149.99</h2>
-                                <span className="text-[1.2rem] font-[500]">$</span>
+                                <span className="text-[1.2rem] font-[500] dark:text-white">$</span>
                             </div>
                             <p className="text-[#424242] text-[0.9rem] dark:text-white">per month</p>
 

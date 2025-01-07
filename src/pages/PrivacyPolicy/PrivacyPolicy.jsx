@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
             <section className="container mx-auto px-5 pb-52">
                 <h2 className="text-secondaryColor text-center mb-16 text-5xl"><span className="text-textColor dark:text-white">Privacy</span> <span className="underline underline-offset-8">Policy</span></h2>
 
-                <div className="space-y-5">
+                <div className="space-y-5 dark:text-white">
                     <div>
                         <h4 className="text-2xl font-semibold">1. Information We Collect</h4>
                         <p>
