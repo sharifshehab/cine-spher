@@ -62,8 +62,7 @@ const Header = () => {
                                 {menuItems}
                             </ul>
                         </div>
-
-                        <a className="text-3xl dark:text-white">Cine <span className="text-white underline dark:text-primaryColor">Sphere</span></a>
+                        <Link to={'/'} className="text-3xl dark:text-white">Cine<span className="text-white underline dark:text-primaryColor">Sphere</span></Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal text-base px-1">

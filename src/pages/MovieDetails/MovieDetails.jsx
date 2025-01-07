@@ -36,8 +36,8 @@ const MovieDetails = () => {
 
         if (user.email !== email) {
             Swal.fire({
-                title: "Permission not allowed",
-                text: 'Only the author of this movie can delete it',
+                title: "Permission Denied",
+                text: 'Only the uploader can delete this movie',
                 icon: "error",
                 customClass: {
                     confirmButton: 'alert-confirm-btn'
@@ -83,14 +83,13 @@ const MovieDetails = () => {
         });
     }
 
-    
     const updateMovie = () => {
         if (user.email === email) {
             navigate(`/update-movie/${_id}`)
         } else {
             Swal.fire({
-                title: "Permission not allowed",
-                text: 'Only the author of this movie can update it',
+                title: "Permission Denied",
+                text: 'Only the uploader can update this movie',
                 icon: "error",
                 customClass: {
                     confirmButton: 'alert-confirm-btn'
