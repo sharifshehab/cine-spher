@@ -16,11 +16,13 @@ const ComingSoon = () => {
                         <p className="text-slate-300 mt-2">
                             Smoking Shadow is a neo-noir thriller following a private detective drawn into a web of lies while investigating a starlet's disappearance. Haunting visuals, complex characters, and unexpected twists unravel the dark side of truth and deception.</p>
                         <div className="flex items-center flex-wrap gap-[20px] mt-6">
-                            <button
-                                className="bg-primaryColor py-3 px-4 flex items-center gap-3">
-                                <FaPlay className="text-white bg-textColor rounded-full py-2" size={30}/>
-                                Watch Trailer
-                            </button>
+                            <a href="https://www.youtube.com/watch?v=1s188WNEiqw" target="_blank">
+                                <button
+                                    className="bg-primaryColor py-3 px-4 flex items-center gap-3">
+                                    <FaPlay className="text-white bg-textColor rounded-full py-2" size={30} />
+                                    Watch Trailer
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </header >

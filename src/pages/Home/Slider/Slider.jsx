@@ -58,7 +58,7 @@ const Slider = () => {
 
                             <h1 className=' text-2xl md:text-5xl py-4 text-white'>Moana 2</h1>
                             <p className='w-full lg:w-7/12 text-white'>In Ancient Polynesia, when a terrible curse incurred by Maui reaches an impetuous Chieftain's daughter's island, she answers the Ocean's call to seek out the demigod to set things right. Watch Moana 2 to feel the adventure and immerse yourself in the journey!</p>
-                            <a href="#" className='py-3 px-4 mt-5 bg-gradient-to-b from-primaryColor to-secondaryColor hover:bg-gradient-to-t transition-all duration-300 shadow-lg inline-block'>play trailer</a>
+                            <a href="https://www.youtube.com/watch?v=73QmOb3L0fU" target="_blank" className='py-3 px-4 mt-5 bg-gradient-to-b from-primaryColor to-secondaryColor hover:bg-gradient-to-t transition-all duration-300 shadow-lg inline-block'>play trailer</a>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -84,7 +84,7 @@ const Slider = () => {
 
                             <h1 className=' text-2xl md:text-5xl py-4 text-white'>Interstellar</h1>
                             <p className='w-full lg:w-7/12 text-white'>The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage. Watch Interstellar to embark on a breathtaking journey through space and time!</p>
-                            <a href="#" className='py-3 px-4 mt-5 bg-gradient-to-b from-primaryColor to-secondaryColor hover:bg-gradient-to-t transition-all duration-300 shadow-lg inline-block'>play trailer</a>
+                            <a href="https://www.youtube.com/watch?v=73QmOb3L0fU" target="_blank" className='py-3 px-4 mt-5 bg-gradient-to-b from-primaryColor to-secondaryColor hover:bg-gradient-to-t transition-all duration-300 shadow-lg inline-block'>play trailer</a>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -110,7 +110,7 @@ const Slider = () => {
 
                             <h1 className=' text-2xl md:text-5xl py-4 text-white'>Godzilla Minus One</h1>
                             <p className='w-full lg:w-7/12 text-white'>In postwar Japan, Godzilla brings new devastation to an already scorched landscape. With no military intervention or government help in sight, the survivors must join together in the face of despair and fight back against an unrelenting horror. Witness the epic struggle and experience the relentless battle for survival!</p>
-                            <a href="#" className='py-3 px-4 mt-5 bg-gradient-to-b from-primaryColor to-secondaryColor hover:bg-gradient-to-t transition-all duration-300 shadow-lg inline-block'>play trailer</a>
+                            <a href="https://www.youtube.com/watch?v=73QmOb3L0fU" target="_blank" className='py-3 px-4 mt-5 bg-gradient-to-b from-primaryColor to-secondaryColor hover:bg-gradient-to-t transition-all duration-300 shadow-lg inline-block'>play trailer</a>
                         </div>
                     </div>
                 </SwiperSlide>

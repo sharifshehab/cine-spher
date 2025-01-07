@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Select from "react-select";
 import { Rating } from 'react-simple-star-rating';
@@ -29,11 +29,17 @@ const MovieForm = ({ handleFormSubmit, currentData = null }) => {
     }
 
     const handleGenre = (selectedOptions) => {
-
         const genres = selectedOptions ? selectedOptions.map(option => option.value) : [];
-        setValue("genre", genres); // Update the value in React Hook Form
+        setValue("genre", genres);
         setGenresValue(selectedOptions);
     }
+
+    useEffect(() => {
+        if (currentData) {
+            setValue("rating", currentData.rating || "");
+            setValue("genre", currentData.genre || "");
+        }
+    }, [currentData, setValue]); 
 
 
     const onSubmit = data => {

@@ -9,7 +9,7 @@ const PricingPlans = () => {
             <Helmet> <title>Cine Sphere - Pricing Plans</title> </Helmet>
 
             <section className="container mx-auto px-5 pb-52">
-                <h2 className="text-secondaryColor text-center mb-16 text-5xl"><span className="text-textColor dark:text-white">Get Our Exiting </span> <span className="underline underline-offset-8">Plans</span></h2>
+                <h2 className="text-secondaryColor text-center mb-16 text-5xl"><span className="text-textColor dark:text-white">Our Exiting </span> <span className="underline underline-offset-8">Plans</span></h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
                     
@@ -24,9 +24,9 @@ const PricingPlans = () => {
                             </div>
                             <p className="text-[#424242] text-[0.9rem] dark:text-white">per month</p>
 
-                            <button className="px-12 py-2 bg-textColor rounded text-white my-6 dark:bg-secondaryColor">
+                     {/*        <button className="px-12 py-2 bg-textColor text-white my-6 dark:bg-secondaryColor">
                                 Join Now
-                            </button>
+                            </button> */}
                         </div>
 
                         <h3 className="text-[1.2rem] font-[600] text-[#424242] mt-3 px-6 dark:text-white">
@@ -57,9 +57,9 @@ const PricingPlans = () => {
                             </div>
                             <p className="text-[#424242] text-[0.9rem] dark:text-white">per month</p>
 
-                            <button className="px-12 py-2 bg-textColor rounded text-white my-6 dark:bg-secondaryColor">
+                      {/*       <button className="px-12 py-2 bg-textColor text-white my-6 dark:bg-secondaryColor">
                                 Join Now
-                            </button>
+                            </button> */}
                         </div>
 
                         <h3 className="text-[1.2rem] font-[600] text-[#424242] mt-3 px-6 dark:text-white">
@@ -90,9 +90,9 @@ const PricingPlans = () => {
                             </div>
                             <p className="text-[#424242] text-[0.9rem] dark:text-white">per month</p>
 
-                            <button className="px-12 py-2 bg-textColor rounded text-white my-6 dark:bg-secondaryColor">
+                       {/*      <button className="px-12 py-2 bg-textColor text-white my-6 dark:bg-secondaryColor">
                                 Join Now
-                            </button>
+                            </button> */}
                         </div>
 
                         <h3 className="text-[1.2rem] font-[600] text-[#424242] mt-3 px-6 dark:text-white">

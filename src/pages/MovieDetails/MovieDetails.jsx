@@ -15,7 +15,8 @@ const MovieDetails = () => {
     const axios = useAxios();
     const navigate = useNavigate();
     const location = useLocation();
-    const { _id, title, poster, duration, genre, releaseYear, rating, summary } = singleMovie[0];
+    const { _id, title, poster, duration, genre, releaseYear, rating, summary,email } = singleMovie[0];
+
     const favoriteMovie = {
         email: user?.email,
         poster,
@@ -24,13 +25,24 @@ const MovieDetails = () => {
         duration,
         releaseYear,
         rating,
-        summary
+        summary,
     }
 
     const deleteMovie = (id) => {
-
         if (!user || !user.uid) {
             navigate('/login', { state : {from: location } });
+            return;
+        } 
+
+        if (user.email !== email) {
+            Swal.fire({
+                title: "Permission not allowed",
+                text: 'Only the author of this movie can delete it',
+                icon: "error",
+                customClass: {
+                    confirmButton: 'alert-confirm-btn'
+                }
+            });
             return;
         } 
 
@@ -69,11 +81,26 @@ const MovieDetails = () => {
                     });
             }
         });
-        
     }
 
-    const addToFavorite = () => {
+    
+    const updateMovie = () => {
+        if (user.email === email) {
+            navigate(`/update-movie/${_id}`)
+        } else {
+            Swal.fire({
+                title: "Permission not allowed",
+                text: 'Only the author of this movie can update it',
+                icon: "error",
+                customClass: {
+                    confirmButton: 'alert-confirm-btn'
+                }
+            });
+        }
+    }
 
+
+    const addToFavorite = () => {
         if (!user || !user.uid) {
             navigate('/login', { state: { from: location } });
             return;
@@ -89,8 +116,6 @@ const MovieDetails = () => {
                     });
                 })
         }
-
-     
     }
 
     return (
@@ -200,8 +225,7 @@ const MovieDetails = () => {
                                         </button>
 
                                         {/* right */}
-                                        <Link to={`/update-movie/${_id}`}>
-                                            <button
+                                    <button onClick={updateMovie}
                                                 className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold transition-all duration-150 ease-in-out hover:pl-10 hover:pr-6 bg-gray-50 group">
                                                 <span
                                                     className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-secondaryColor group-hover:h-full"></span>
@@ -215,7 +239,6 @@ const MovieDetails = () => {
 
                                                 <span className="text-secondaryColor relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">Update Movie</span>
                                             </button>
-                                        </Link>
                                     </div>
 
                                     <button onClick={addToFavorite}
