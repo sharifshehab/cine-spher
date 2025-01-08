@@ -54,7 +54,7 @@ CineSphere is a modern movie streaming platform that provides an immersive and s
 2. **Navigate to the project folder and open it with cmd terminal**
 3. **Write <code>npm i</code> in the terminal**
 4. **Create a file name <code>.env.local</code>, inside the project root folder**
-5. **Save your environment variable in this file:**
+5. **Save your firebase config keys as environment variables in this file:**
         - **VITE_APIKEY=your-firebase-api-key**
         - **VITE_AUTHDOMAIN=your-firebase-authdomain**
         - **VITE_PROJECTID=your-firebase-project-id**
@@ -62,18 +62,8 @@ CineSphere is a modern movie streaming platform that provides an immersive and s
         - **VITE_MESSAGINGSENDERID=your-firebase-messaging-sender-id**
         - **VITE_APPID=your-firebase-app-id**
 6. **After the installation is complete, start the application by typing <code>npm run dev</code> in terminal**
-=======
-4. **Create a file name ".env.local", inside the project root folder**
-5. **Past these codes in this file:**
-- **VITE_APIKEY=AIzaSyBRn6pz1OjLZndhCJDjam2FXIfS9LfMi9I**
-- **VITE_AUTHDOMAIN=cine-sphere-2d6f3.firebaseapp.com**
-- **VITE_PROJECTID=cine-sphere-2d6f3**
-- **VITE_STORAGEBUCKET=cine-sphere-2d6f3.firebasestorage.app**
-- **VITE_MESSAGINGSENDERID=978464302282**
-- **VITE_APPID=1:978464302282:web:9b162032698b938371c033**
-6. **After the installation is complete, start the application by typing npm run dev**
 
 - **You should now be able to view and interact with the application on your local machine!**
 
-##  Live link:
+##  Live Link:
 - **[Cine Sphere](https://cine-sphere-2d6f3.web.app)**
