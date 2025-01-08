@@ -13,7 +13,7 @@ const PricingPlans = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
                     
-                    <div className="border border-[#e5eaf2] shadow-lg">
+                    <div className="bg-white border border-[#e5eaf2] shadow-lg">
                         <div className="w-full flex items-center justify-center flex-col p-6">
                             <h2 className="text-2xl font-semibold dark:text-white">Standard</h2>
                             <p className="text-[#424242] text-[1rem] dark:text-white">Ideal for growing movie enthusiasts</p>
@@ -46,7 +46,7 @@ const PricingPlans = () => {
                         <div className="w-full h-[10px] bg-primaryColor"></div>
                     </div>{/* single */}
 
-                    <div className="border border-[#e5eaf2] shadow-lg">
+                    <div className="bg-white border border-[#e5eaf2] shadow-lg">
                         <div className="w-full flex items-center justify-center flex-col p-6">
                             <h2 className="text-2xl font-semibold dark:text-white">Premium</h2>
                             <p className="text-[#424242] text-[1rem] dark:text-white">For movie lovers who want the best experience</p>
@@ -79,7 +79,7 @@ const PricingPlans = () => {
                         <div className="w-full h-[10px] bg-primaryColor"></div>
                     </div>{/* single */}
 
-                    <div className="border border-[#e5eaf2] shadow-lg">
+                    <div className="bg-white border border-[#e5eaf2] shadow-lg">
                         <div className="w-full flex items-center justify-center flex-col p-6">
                             <h2 className="text-2xl font-semibold dark:text-white">Elite</h2>
                             <p className="text-[#424242] text-[1rem] dark:text-white">For the ultimate movie streaming experience</p>
