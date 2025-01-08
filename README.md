@@ -55,12 +55,12 @@ CineSphere is a modern movie streaming platform that provides an immersive and s
 3. **Write <code>npm i</code> in the terminal**
 4. **Create a file name <code>.env.local</code>, inside the project root folder**
 5. **Save your firebase config keys as environment variables in this file:**
-        - **VITE_APIKEY=your-firebase-api-key**
-        - **VITE_AUTHDOMAIN=your-firebase-authdomain**
-        - **VITE_PROJECTID=your-firebase-project-id**
-        - **VITE_STORAGEBUCKET=your-firebase-storage-bucket**
-        - **VITE_MESSAGINGSENDERID=your-firebase-messaging-sender-id**
-        - **VITE_APPID=your-firebase-app-id**
+   - **VITE_APIKEY=your-firebase-api-key**
+    - **VITE_AUTHDOMAIN=your-firebase-authdomain**
+    - **VITE_PROJECTID=your-firebase-project-id**
+    - **VITE_STORAGEBUCKET=your-firebase-storage-bucket**
+    - **VITE_MESSAGINGSENDERID=your-firebase-messaging-sender-id**
+    - **VITE_APPID=your-firebase-app-id**
 6. **After the installation is complete, start the application by typing <code>npm run dev</code> in terminal**
 
 - **You should now be able to view and interact with the application on your local machine!**
