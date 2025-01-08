@@ -35,7 +35,7 @@ CineSphere is a modern movie streaming platform that provides an immersive and s
 ## Installation:
 1. **First, clone the repository to your local machine. you can do this by downloading the zip file or by cloning it using the web URL**
 2. **Navigate to the project folder and open it with cmd terminal**
-3. **Write npm i in the terminal**
+3. **Write <code>npm i</code> in the terminal**
 4. **Create a file name ".env.local", inside the project root folder**
 5. **Past these codes in this file:**
 - **VITE_APIKEY=AIzaSyBRn6pz1OjLZndhCJDjam2FXIfS9LfMi9I**
