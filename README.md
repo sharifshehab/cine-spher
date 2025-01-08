@@ -53,6 +53,7 @@ CineSphere is a modern movie streaming platform that provides an immersive and s
 1. **First, clone the repository to your local machine. you can do this by downloading the zip file or by cloning it using the web URL**
 2. **Navigate to the project folder and open it with cmd terminal**
 3. **Write <code>npm i</code> in the terminal**
+<<<<<<< HEAD
 4. **Create a file name <code>.env.local</code>, inside the project root folder**
 5. **Save your environment variable in this file:**
 - **VITE_APIKEY=your-firebase-api-key**
@@ -62,6 +63,17 @@ CineSphere is a modern movie streaming platform that provides an immersive and s
 - **VITE_MESSAGINGSENDERID=your-firebase-messaging-sender-id**
 - **VITE_APPID=your-firebase-app-id**
 6. **After the installation is complete, start the application by typing <code>npm run dev</code> in terminal**
+=======
+4. **Create a file name ".env.local", inside the project root folder**
+5. **Past these codes in this file:**
+- **VITE_APIKEY=AIzaSyBRn6pz1OjLZndhCJDjam2FXIfS9LfMi9I**
+- **VITE_AUTHDOMAIN=cine-sphere-2d6f3.firebaseapp.com**
+- **VITE_PROJECTID=cine-sphere-2d6f3**
+- **VITE_STORAGEBUCKET=cine-sphere-2d6f3.firebasestorage.app**
+- **VITE_MESSAGINGSENDERID=978464302282**
+- **VITE_APPID=1:978464302282:web:9b162032698b938371c033**
+6. **After the installation is complete, start the application by typing npm run dev**
+>>>>>>> 6dff081d16ec282c39213dd8ea82704a5065c5d0
 
 - **You should now be able to view and interact with the application on your local machine!**
 
