@@ -10,7 +10,7 @@ CineSphere is a modern movie streaming platform that provides an immersive and s
 
 ## Key features:
 1. **Showcase the top six highest-rated movies on the home page**
-2. **User can add their favorite movies to the favorite list** 
+2. **User can add their selected movies to their favorite list** 
 3. **Search movies by name from the all movies list**
 4. **Author can delete or update their movie information** 
 5. **Proper authorization check before allowing deletion or update actions**
@@ -53,15 +53,14 @@ CineSphere is a modern movie streaming platform that provides an immersive and s
 1. **First, clone the repository to your local machine. you can do this by downloading the zip file or by cloning it using the web URL**
 2. **Navigate to the project folder and open it with cmd terminal**
 3. **Write <code>npm i</code> in the terminal**
-<<<<<<< HEAD
 4. **Create a file name <code>.env.local</code>, inside the project root folder**
 5. **Save your environment variable in this file:**
-- **VITE_APIKEY=your-firebase-api-key**
-- **VITE_AUTHDOMAIN=your-firebase-authdomain**
-- **VITE_PROJECTID=your-firebase-project-id**
-- **VITE_STORAGEBUCKET=your-firebase-storage-bucket**
-- **VITE_MESSAGINGSENDERID=your-firebase-messaging-sender-id**
-- **VITE_APPID=your-firebase-app-id**
+        - **VITE_APIKEY=your-firebase-api-key**
+        - **VITE_AUTHDOMAIN=your-firebase-authdomain**
+        - **VITE_PROJECTID=your-firebase-project-id**
+        - **VITE_STORAGEBUCKET=your-firebase-storage-bucket**
+        - **VITE_MESSAGINGSENDERID=your-firebase-messaging-sender-id**
+        - **VITE_APPID=your-firebase-app-id**
 6. **After the installation is complete, start the application by typing <code>npm run dev</code> in terminal**
 =======
 4. **Create a file name ".env.local", inside the project root folder**
@@ -73,7 +72,6 @@ CineSphere is a modern movie streaming platform that provides an immersive and s
 - **VITE_MESSAGINGSENDERID=978464302282**
 - **VITE_APPID=1:978464302282:web:9b162032698b938371c033**
 6. **After the installation is complete, start the application by typing npm run dev**
->>>>>>> 6dff081d16ec282c39213dd8ea82704a5065c5d0
 
 - **You should now be able to view and interact with the application on your local machine!**
 
