@@ -1,7 +1,7 @@
 # CineSphere - Journey to the Realm of Films
 <div align="center">
   <img height="500" src="https://i.ibb.co.com/2NmjKcZ/cine-spher.webp"  />
-   <img width="12" />
+   <img width="20" />
 </div>
 CineSphere is a modern movie streaming platform that provides an immersive and seamless viewing experience. With a user-friendly interface and flexible subscription plans, CineSphere allows users to store their favorite content in the cloud, and enjoy exclusive features tailored to movie enthusiasts. Whether you're a casual viewer or a film enthusiast, CineSphere is designed to bring the best in entertainment right to your fingertips.
 
