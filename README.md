@@ -8,9 +8,10 @@ CineSphere is a modern movie streaming platform that provides an immersive and s
 
 ## Technologies used:
 - **React Router**
+- **Context API**
 - **Firebase**
-- **Express.js**
-- **JWT**
+- **Tanstack Query**
+- **Axios**
 
 ## Key features:
 1. **Showcase the top six highest-rated movies on the home page**
